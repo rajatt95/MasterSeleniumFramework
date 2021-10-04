@@ -1,6 +1,7 @@
 # OC_MasterSeleniumFramework
 This project is designed and developed with the help of the Udemy course (https://www.udemy.com/course/selenium-java-test-framework/). It has a concept of Atomic tests (Achieved by Selenium WebDriver API and RestAssured API)
 ------------------------------------------------------------
+![image](https://user-images.githubusercontent.com/26399692/135917549-ee1e000a-ce07-4051-89b1-b57ec9b6b9b7.png)
 ------------------------------------------------------------
 Updations done:
 ------------------------------------------------------------
@@ -11,6 +12,8 @@ Browser - Chrome, Edge, Safari, Firefox
 TestType - Smoke, Sanity, Regression, BVT
 
 2. Screenshots are attached in the Screenhot ad Base64 format.
+![image](https://user-images.githubusercontent.com/26399692/135918483-ca9320af-83da-4b55-b3d7-24449cc1bd04.png)
+![image](https://user-images.githubusercontent.com/26399692/135918708-f7add95c-11c7-4d8c-8e66-716b2ed94cbe.png)
 
 ------------------------------------------------------------
 2. User has options for customization
@@ -32,8 +35,4 @@ skipped_steps_screenshot=yes
 #retry failed test cases -> yes or no
 retry_failed_tests=yes
 ------------------------------------------------------------
-
-![image](https://user-images.githubusercontent.com/26399692/135917549-ee1e000a-ce07-4051-89b1-b57ec9b6b9b7.png)
-![image](https://user-images.githubusercontent.com/26399692/135918483-ca9320af-83da-4b55-b3d7-24449cc1bd04.png)
-
 
