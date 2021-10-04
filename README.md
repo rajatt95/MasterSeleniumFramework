@@ -7,9 +7,9 @@ Updations done:
 ------------------------------------------------------------
 ExtentReports V5 
 1. User can apply the Filters - 
-Author - Rajat, Nishant, Gautam, Pankaj 
-Browser - Chrome, Edge, Safari, Firefox 
-TestType - Smoke, Sanity, Regression, BVT
+- Author - Rajat, Nishant, Gautam, Pankaj 
+- Browser - Chrome, Edge, Safari, Firefox 
+- TestType - Smoke, Sanity, Regression, BVT
 
 2. Screenshots are attached in the Screenhot ad Base64 format.
 ![image](https://user-images.githubusercontent.com/26399692/135918483-ca9320af-83da-4b55-b3d7-24449cc1bd04.png)
