@@ -1,4 +1,6 @@
 
+# This needs modification
+-----------------------------------
 1. Register
  <input type="hidden" id="woocommerce-register-nonce" name="woocommerce-register-nonce" value="656055dd4d"/>
 
