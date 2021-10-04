@@ -1,6 +1,4 @@
 
-# This file needs updation
------------------------------------
 1. Register
  <input type="hidden" id="woocommerce-register-nonce" name="woocommerce-register-nonce" value="656055dd4d"/>
 
@@ -80,7 +78,6 @@ Testing framework - TestNG
 
 
 	AnnotationTransformer
-	
 	ListenerClass
 	MethodInterceptor
 	RetryFailedTests

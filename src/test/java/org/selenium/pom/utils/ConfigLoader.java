@@ -22,15 +22,19 @@ public class ConfigLoader {
 
 		case STAGE: {
 			properties = PropertyUtils.propertyLoader(RESOURCES_PATH + "stg_config.properties");
+			break;
 		}
 		case INT: {
 			properties = PropertyUtils.propertyLoader(RESOURCES_PATH + "int_config.properties");
+			break;
 		}
 		case QA: {
 			properties = PropertyUtils.propertyLoader(RESOURCES_PATH + "qa_config.properties");
+			break;
 		}
 		case PRODUCTION: {
 			properties = PropertyUtils.propertyLoader(RESOURCES_PATH + "prod_config.properties");
+			break;
 		}
 		default: {
 			throw new IllegalStateException("Invalid EnvType: " + env);
