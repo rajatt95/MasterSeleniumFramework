@@ -13,7 +13,7 @@ TestType - Smoke, Sanity, Regression, BVT
 
 2. Screenshots are attached in the Screenhot ad Base64 format.
 ![image](https://user-images.githubusercontent.com/26399692/135918483-ca9320af-83da-4b55-b3d7-24449cc1bd04.png)
-![image](https://user-images.githubusercontent.com/26399692/135918708-f7add95c-11c7-4d8c-8e66-716b2ed94cbe.png)
+![image](https://user-images.githubusercontent.com/26399692/135918943-a430a4fc-dd05-4803-9765-dbb94bb4fd89.png)
 
 ------------------------------------------------------------
 2. User has options for customization
