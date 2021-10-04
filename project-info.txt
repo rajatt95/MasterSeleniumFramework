@@ -73,35 +73,6 @@ Approach -
 ----------------
 Testing framework - TestNG
 
-
-
-
-
-	AnnotationTransformer
-	ListenerClass
-	MethodInterceptor
-	RetryFailedTests
-Build and Dependency Management Tool - Maven
-Reports - ExtentReports V5, TestNG reports (Emailable-reports.html)
-	ExtentReports V5-
-		Added support for Authors and Category
-			- Screenshots as Base64 format attached in Report
-			- Test case result in markup format at last line of Test case steps
-			(Pass- Green, Fail- Red, Skip- Yellow)
-Approach -
-	Data-Driven testing using Excel file
-	RUN_MANAGER and TEST_DATA
-Other open source libraries used - Apache POI
-Other functionalities implemented - 
-	Custom Annotations,
-	Custom Exceptions,
-	Custom Enums
-DriverManager, DriverFactory
-Utilities - 
-	Encode Password, Dynamic XPath, OS and Browser info, amd many more
-
-Assertions using "assertj-core" library
--------------------------------------------------
 -------------------------------------------------
 PENDING
 

@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 public class NavigationTest extends BaseTest{
 
 	@Test
-	public void NavigateFromHomeToStoreUsingMainMenu() {
+	public void navigateFromHomeToStoreUsingMainMenu() {
 		
 		StorePage storePage =
 				new HomePage(getDriver()).

@@ -15,9 +15,9 @@
 		<!-- You can pass the Testng.xml file using Maven cmd line and you can 
 			directly run the project using mvn clean test -->
 		<suiteFile>testng.xml</suiteFile>
-		 <aspectj.version>1.9.4</aspectj.version>
+		<aspectj.version>1.9.4</aspectj.version>
 	</properties>
-	
+
 
 	<build>
 		<plugins>
@@ -123,6 +123,12 @@
 			<version>2.14.0</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>5.0.6</version>
+		</dependency>
 	</dependencies>
 
 </project>

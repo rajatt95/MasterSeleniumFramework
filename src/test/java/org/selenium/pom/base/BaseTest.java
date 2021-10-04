@@ -11,8 +11,9 @@ import org.openqa.selenium.Cookie;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.selenium.pom.constants.DriverType;
-import org.selenium.pom.factory.DriverManagerFactory;
+import org.selenium.pom.driver.DriverManagerFactory;
+import org.selenium.pom.driver.DriverManager;
+import org.selenium.pom.enums.DriverType;
 import org.selenium.pom.utils.CookieUtils;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -24,7 +25,6 @@ import io.restassured.http.Cookies;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
-import ru.yandex.qatools.ashot.shooting.ShootingStrategy;
 
 public class BaseTest {
 
@@ -34,14 +34,16 @@ public class BaseTest {
 	 * time of parallel execution
 	 */
 	// protected WebDriver driver;
-	private ThreadLocal<WebDriver> driver = new ThreadLocal<>();;
+	//private ThreadLocal<WebDriver> driver = new ThreadLocal<>();;
 
 	protected WebDriver getDriver() {
-		return this.driver.get();
+		//return this.driver.get();
+		return DriverManager.getDriver();
 	}
 
 	private void setDriver(WebDriver driver) {
-		this.driver.set(driver);
+		//this.driver.set(driver);
+		DriverManager.setDriver(driver);
 	}
 
 	/*
