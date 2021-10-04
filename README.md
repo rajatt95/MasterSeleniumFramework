@@ -23,7 +23,7 @@ ExtentReports V5
 #If yes -> Report name will have index.html
 override_reports=yes
 
-- passed_steps_screenshot=no 
+- passed_steps_screenshot=yes
 
 - failed_steps_screenshot=yes 
 
