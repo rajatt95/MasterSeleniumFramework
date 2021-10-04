@@ -18,21 +18,17 @@ ExtentReports V5
 ------------------------------------------------------------
 2. User has options for customization
 
-#DynamicReports --> yes or no
+- #DynamicReports --> yes or no
 #If no -> Report name will have CurrentTime+index.html
 #If yes -> Report name will have index.html
 override_reports=yes
 
-#PassedStepsScreenshot --> yes or no
-passed_steps_screenshot=yes 
+- passed_steps_screenshot=no 
 
-#FailedStepsScreenshot --> yes or no
-failed_steps_screenshot=yes 
+- failed_steps_screenshot=yes 
 
-#SkippedStepsScreenshot --> yes or no
-skipped_steps_screenshot=yes 
+- skipped_steps_screenshot=yes 
 
-#retry failed test cases -> yes or no
-retry_failed_tests=yes
+- retry_failed_tests=yes
 ------------------------------------------------------------
 
