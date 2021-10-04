@@ -7,8 +7,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
-		<maven.compiler.source>16</maven.compiler.source>
-		<maven.compiler.target>16</maven.compiler.target>
+		<maven.compiler.source>8</maven.compiler.source>
+		<maven.compiler.target>8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- 03_testng_package_2_Browser_Seq.xml - This xml file will be taken 
 			as default -->

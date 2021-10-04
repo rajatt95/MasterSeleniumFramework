@@ -8,7 +8,8 @@ import org.selenium.pom.constants.EnvType;
 public class ConfigLoader {
 
 	private static final String RESOURCES_PATH = System.getProperty("user.dir") + "/src/test/resources/";
-	private final Properties properties;
+	private Properties properties;
+	//private final Properties properties;
 	private static ConfigLoader configLoader;
 
 	private ConfigLoader() {
@@ -18,12 +19,32 @@ public class ConfigLoader {
 
 		switch (EnvType.valueOf(env)) {
 		/* Only STAGE is working, Rest are taken for example */
-		case STAGE -> properties = PropertyUtils.propertyLoader(RESOURCES_PATH + "stg_config.properties");
-		case INT -> properties = PropertyUtils.propertyLoader(RESOURCES_PATH + "int_config.properties");
-		case QA -> properties = PropertyUtils.propertyLoader(RESOURCES_PATH + "qa_config.properties");
-		case PRODUCTION -> properties = PropertyUtils.propertyLoader(RESOURCES_PATH + "prod_config.properties");
-		default -> throw new IllegalStateException("Invalid EnvType: " + env);
+
+		case STAGE: {
+			properties = PropertyUtils.propertyLoader(RESOURCES_PATH + "stg_config.properties");
 		}
+		case INT: {
+			properties = PropertyUtils.propertyLoader(RESOURCES_PATH + "int_config.properties");
+		}
+		case QA: {
+			properties = PropertyUtils.propertyLoader(RESOURCES_PATH + "qa_config.properties");
+		}
+		case PRODUCTION: {
+			properties = PropertyUtils.propertyLoader(RESOURCES_PATH + "prod_config.properties");
+		}
+		default: {
+			throw new IllegalStateException("Invalid EnvType: " + env);
+		}
+
+		/*
+		 * case STAGE -> properties = PropertyUtils.propertyLoader(RESOURCES_PATH +
+		 * "stg_config.properties"); case INT -> properties =
+		 * PropertyUtils.propertyLoader(RESOURCES_PATH + "int_config.properties"); case
+		 * QA -> properties = PropertyUtils.propertyLoader(RESOURCES_PATH +
+		 * "qa_config.properties"); case PRODUCTION -> properties =
+		 * PropertyUtils.propertyLoader(RESOURCES_PATH + "prod_config.properties");
+		 * default -> throw new IllegalStateException("Invalid EnvType: " + env);
+		 */}
 	}
 
 	public static ConfigLoader getInstance() {
