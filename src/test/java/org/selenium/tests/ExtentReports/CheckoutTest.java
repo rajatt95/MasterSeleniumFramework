@@ -1,4 +1,4 @@
-package org.selenium.tests.ExtentReports;
+package org.selenium.tests.Extent;
 
 import java.io.IOException;
 
