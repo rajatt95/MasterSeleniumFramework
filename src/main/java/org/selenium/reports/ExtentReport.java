@@ -75,7 +75,7 @@ public final class ExtentReport {
 		ExtentManager.setExtentTest(extent.createTest(testCaseName));
 	}
 
-	public static void addAuthors(AuthorType[] authors) {
+	synchronized public static void addAuthors(AuthorType[] authors) {
 
 		for (AuthorType author : authors) {
 			ExtentManager.getExtentTest().assignAuthor(author.toString());
@@ -84,7 +84,7 @@ public final class ExtentReport {
 	}
 
 	// public static void addCategories(String[] categories) {
-	public static void addCategories(CategoryType[] categories) {
+	synchronized public static void addCategories(CategoryType[] categories) {
 		// for (String category : categories) {
 		for (CategoryType category : categories) {
 			ExtentManager.getExtentTest().assignCategory(category.toString());
@@ -92,7 +92,7 @@ public final class ExtentReport {
 
 	}
 
-	public static void addDevices() {
+	synchronized public static void addDevices() {
 		ExtentManager.getExtentTest().assignDevice(BrowserInfoUtils.getBrowserInfo());
 	}
 }

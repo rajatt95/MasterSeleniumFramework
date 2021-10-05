@@ -42,7 +42,7 @@ public class StorePage extends BasePage {
 	}
 
 	/* Functional Page Object */
-	/* Represents a Functonality */
+	/* Represents a Functionality */
 	/* 1 method will do 2 operations --> sendKeys(), click() */
 	public StorePage search(String txt) {
 		// driver.findElement(searchFld).sendKeys(txt);
