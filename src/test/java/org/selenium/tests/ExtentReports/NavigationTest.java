@@ -1,4 +1,4 @@
-package org.selenium.tests.ExtentReports;
+package org.selenium.tests.Extent;
 
 import org.selenium.annotations.FrameworkAnnotation;
 import org.selenium.pom.base.BaseTest;
