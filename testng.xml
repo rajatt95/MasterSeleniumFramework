@@ -15,7 +15,7 @@
 		parallel="methods">
 		<parameter name="browser" value="CHROME"></parameter>
 		<packages>
-			<package name="org.selenium.tests.ExtentReports"></package>
+			<package name="org.selenium.tests.Extent"></package>
 		</packages>
 	</test>
 	<test thread-count="2"
