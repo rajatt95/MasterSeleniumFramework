@@ -24,7 +24,7 @@
 		parallel="methods">
 		<parameter name="browser" value="FIREFOX"></parameter>
 		<packages>
-			<package name="org.selenium.tests.ExtentReports"></package>
+			<package name="org.selenium.tests.Extent"></package>
 		</packages>
 	</test>
 	<test thread-count="2"
@@ -33,14 +33,14 @@
 		parallel="methods">
 		<parameter name="browser" value="EDGE"></parameter>
 		<packages>
-			<package name="org.selenium.tests.ExtentReports"></package>
+			<package name="org.selenium.tests.Extent"></package>
 		</packages>
 	</test>
 
 	<!-- Test -->
 	<!-- <test thread-count="2" name="Regression Tests execution over Opera 
 		Browser" parallel="methods"> <parameter name="browser" value="OPERA"></parameter> 
-		<packages> <package name="org.selenium.tests.ExtentReports"></package> </packages> 
+		<packages> <package name="org.selenium.tests.Extent"></package> </packages> 
 		</test> --> <!-- Test -->
 
 </suite> <!-- Suite -->
