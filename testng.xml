@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Automation Test Suite" parallel="tests"
-	thread-count="12" data-provider-thread-count="2">
+	thread-count="6" data-provider-thread-count="2">
 
 	<listeners>
 		<listener
@@ -9,7 +9,7 @@
 		<listener class-name="org.selenium.listeners.ListenerClass"></listener>
 	</listeners>
 
-	<test thread-count="4"
+	<test thread-count="2"
 		name="Regression Tests execution over Chrome 
 		Browser"
 		parallel="methods">
@@ -18,7 +18,7 @@
 			<package name="org.selenium.tests.ExtentReports"></package>
 		</packages>
 	</test>
-	<test thread-count="4"
+	<test thread-count="2"
 		name="Regression Tests execution over Firefox 
 		Browser"
 		parallel="methods">
@@ -27,7 +27,7 @@
 			<package name="org.selenium.tests.ExtentReports"></package>
 		</packages>
 	</test>
-	<test thread-count="4"
+	<test thread-count="2"
 		name="Regression Tests execution over Edge 
 		Browser"
 		parallel="methods">
