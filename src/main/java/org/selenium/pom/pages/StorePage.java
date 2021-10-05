@@ -53,7 +53,7 @@ public class StorePage extends BasePage {
 
 	@Step
 	public StorePage load() {
-		load("/store");
+		load("store");
 		return this;
 	}
 

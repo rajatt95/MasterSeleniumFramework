@@ -43,6 +43,7 @@ public class BasePage {
 
 		// driver.get("https://askomdch.com/" + endPoint);
 		driver.get(ConfigLoader.getInstance().getBaseUrl() + endPoint);
+		ExtentLogger.info("Navigating to : <b>" + ConfigLoader.getInstance().getBaseUrl() + endPoint + "</b>");
 	}
 
 	public void waitForOverlaysToDisappear(By overlay) {

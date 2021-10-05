@@ -26,7 +26,7 @@ public class HomePage extends BasePage {
 	}
 
 	public HomePage load() {
-		load("/");
+		load("");
 		wait.until(ExpectedConditions.titleContains("AskOmDch"));
 		return this;
 	}

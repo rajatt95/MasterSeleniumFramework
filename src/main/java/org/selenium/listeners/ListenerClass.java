@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 import org.selenium.annotations.FrameworkAnnotation;
 import org.selenium.pom.utils.BrowserOSInfoUtils;
+import org.selenium.pom.utils.EmailSendUtils;
+import org.selenium.pom.utils.ZipUtils;
 import org.selenium.reports.ExtentLogger;
 import org.selenium.reports.ExtentReport;
 import org.testng.ISuite;
@@ -18,6 +20,11 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 public class ListenerClass implements ITestListener, ISuiteListener {
 
+	static int count_passedTCs;
+	static int count_skippedTCs;
+	static int count_failedTCs;
+	static int count_totalTCs;
+
 	@Override
 	public void onStart(ISuite suite) {
 		ExtentReport.initReports();
@@ -26,10 +33,13 @@ public class ListenerClass implements ITestListener, ISuiteListener {
 	@Override
 	public void onFinish(ISuite suite) {
 		ExtentReport.flushReports();
+		ZipUtils.zip();
+		EmailSendUtils.sendEmail(count_totalTCs, count_passedTCs, count_failedTCs, count_skippedTCs);
 	}
 
 	@Override
 	public void onTestStart(ITestResult result) {
+		count_totalTCs = count_totalTCs + 1;
 		ExtentReport.createTest(result.getMethod().getMethodName());
 		// ExtentReport.createTest(result.getMethod().getDescription());
 
@@ -40,13 +50,13 @@ public class ListenerClass implements ITestListener, ISuiteListener {
 				.getAnnotation(FrameworkAnnotation.class).category());
 
 		ExtentReport.addDevices();
-		ExtentLogger.info(BrowserOSInfoUtils.getOS_Browser_BrowserVersionInfo());
+		ExtentLogger.info("<b>" + BrowserOSInfoUtils.getOS_Browser_BrowserVersionInfo() + "</b>");
 
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-
+		count_passedTCs = count_passedTCs + 1;
 		// TMB
 		// ExtentLogger.pass(result.getMethod().getMethodName() + " is passed");
 
@@ -59,6 +69,7 @@ public class ListenerClass implements ITestListener, ISuiteListener {
 
 	@Override
 	public void onTestFailure(ITestResult result) {
+		count_failedTCs = count_failedTCs + 1;
 		// TMB
 		// ExtentLogger.fail(result.getMethod().getMethodName() + " is failed");
 		// ExtentLogger.fail(result.getMethod().getMethodName() + " is failed", true);
@@ -79,12 +90,14 @@ public class ListenerClass implements ITestListener, ISuiteListener {
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
+
+		count_skippedTCs = count_skippedTCs + 1;
 		// TMB
 		// ExtentLogger.skip(result.getMethod().getMethodName() + " is skipped");
 		// ExtentLogger.skip(result.getMethod().getMethodName() + " is skipped", true);
 
 		ExtentLogger.skip(result.getThrowable().toString());
-		
+
 		// Rajat
 		String logText = "<b>" + result.getMethod().getMethodName() + " is skipped.</b>";
 		Markup markup_message = MarkupHelper.createLabel(logText, ExtentColor.YELLOW);

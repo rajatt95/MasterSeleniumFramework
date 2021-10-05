@@ -123,5 +123,15 @@ public class ConfigLoader {
 		}
 	}
 	
+	public String getSendEmailToUsers() {
+		String prop = properties.getProperty("send_email_to_users");
+		if (prop != null) {
+			return prop.trim();
+		} else {
+			throw new RuntimeException("Property send_email_to_users is not specified in the config.properties file");
+		}
+	}
+	
+	
 
 }

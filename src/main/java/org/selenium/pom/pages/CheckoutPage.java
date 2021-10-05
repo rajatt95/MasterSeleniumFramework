@@ -17,7 +17,7 @@ public class CheckoutPage extends BasePage {
 	}
 
 	public CheckoutPage load() {
-		load("/checkout");
+		load("checkout");
 		return this;
 	};
 

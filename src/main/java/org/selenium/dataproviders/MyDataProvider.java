@@ -9,7 +9,7 @@ import org.testng.annotations.DataProvider;
 
 public class MyDataProvider {
 
-	@DataProvider(name="getFeaturedProducts",parallel = true)
+	@DataProvider(name="getFeaturedProducts",parallel = false)
 	public Product[] getFeaturedProducts() throws IOException  {
 		return JacksonUtils.deSerializationJSON("products.json", Product[].class);
 	}

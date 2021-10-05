@@ -45,8 +45,13 @@ public final class ExtentReport {
 
 			// spark.config().setEncoding("utf-8");
 			spark.config().setTheme(Theme.STANDARD);
-			spark.config().setDocumentTitle("Automation Test Suite Reports - ALL");
-			spark.config().setReportName("Automation Test Suite Results - ALL");
+			spark.config().setDocumentTitle(FrameworkConstants.getProjectName() + " - ALL");
+			spark.config().setReportName(FrameworkConstants.getProjectName() + " - ALL");
+
+			extent.setSystemInfo("Organization", "Nagarro");
+			extent.setSystemInfo("Employee", "Rajat Verma");
+			extent.setSystemInfo("Domain", "Engineering (IT - Software)");
+			extent.setSystemInfo("Skill", "Test Automation Engineer");
 
 		}
 
