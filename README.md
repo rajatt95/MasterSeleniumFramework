@@ -24,4 +24,9 @@ Updations done:
 ------------------------------------------------------------
 **Email to Users**
 ![image](https://user-images.githubusercontent.com/26399692/135975570-d520d163-a7eb-4695-b22c-a25979415ef5.png)
-
+------------------------------------------------------------
+**Others:**
+1. Retry failed test cases
+2. Custom Enums, Exceptions, Annotations 
+3. Serialization and Deserialization using Jackson-Databind dependency
+4. Data Driven testing using JSON file
