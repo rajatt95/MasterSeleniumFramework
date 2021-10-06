@@ -14,8 +14,11 @@
 			as default -->
 		<!-- You can pass the Testng.xml file using Maven cmd line and you can 
 			directly run the project using mvn clean test -->
-		<suiteFile>testng.xml</suiteFile>
+		<!-- For local run -> it will go for testng_local.xml -->
+		<suiteFile>testng_local.xml</suiteFile>
 		<aspectj.version>1.9.4</aspectj.version>
+		<!--By default = 2 -->
+		<browserInstances>2</browserInstances>
 	</properties>
 
 
@@ -26,7 +29,9 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.0.0-M5</version>
 				<configuration>
-					<!-- <parallel>methods</parallel> <threadCount>10</threadCount> -->
+					<parallel>methods</parallel>
+					<!-- <parallel>both</parallel> -->
+					<threadCount>${browserInstances}</threadCount>
 					<suiteXmlFiles>
 						<!-- You can add more than 1 XML files here also -->
 						<!-- <suiteXmlFile>testng.xml</suiteXmlFile> -->
