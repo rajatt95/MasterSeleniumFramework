@@ -36,3 +36,4 @@ Updations done:
 4. Data Driven testing using JSON file
 5. Zip the ExtentReports directory into Project path (you can send this Zip file as well as an Attachment in Email)
 6. Automatically open the report after tests execution.
+7. Send EMail using Java mail API to User(s) with attachment(s).
