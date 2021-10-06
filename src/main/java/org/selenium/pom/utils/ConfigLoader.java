@@ -15,6 +15,11 @@ public class ConfigLoader {
 	private ConfigLoader() {
 
 		/* Setting EnvType.STAGE as default environment */
+		/*
+		 * This will check for the env value from Jenkins first. If it does not get any
+		 * input from Jenkins/mvn cmd line, then, will take stg_config.propertie file as
+		 * default
+		 */
 		String env = System.getProperty("env", EnvType.STAGE.toString());
 
 		switch (EnvType.valueOf(env)) {
@@ -40,15 +45,7 @@ public class ConfigLoader {
 			throw new IllegalStateException("Invalid EnvType: " + env);
 		}
 
-		/*
-		 * case STAGE -> properties = PropertyUtils.propertyLoader(RESOURCES_PATH +
-		 * "stg_config.properties"); case INT -> properties =
-		 * PropertyUtils.propertyLoader(RESOURCES_PATH + "int_config.properties"); case
-		 * QA -> properties = PropertyUtils.propertyLoader(RESOURCES_PATH +
-		 * "qa_config.properties"); case PRODUCTION -> properties =
-		 * PropertyUtils.propertyLoader(RESOURCES_PATH + "prod_config.properties");
-		 * default -> throw new IllegalStateException("Invalid EnvType: " + env);
-		 */}
+		}
 	}
 
 	public static ConfigLoader getInstance() {
@@ -90,30 +87,31 @@ public class ConfigLoader {
 		if (prop != null) {
 			return prop.trim();
 		} else {
-			throw new RuntimeException("Property failed_steps_screenshot is not specified in the config.properties file");
+			throw new RuntimeException(
+					"Property failed_steps_screenshot is not specified in the config.properties file");
 		}
 	}
-	
-	
+
 	public String getPassedStepsScreenshot() {
 		String prop = properties.getProperty("passed_steps_screenshot");
 		if (prop != null) {
 			return prop.trim();
 		} else {
-			throw new RuntimeException("Property passed_steps_screenshot is not specified in the config.properties file");
+			throw new RuntimeException(
+					"Property passed_steps_screenshot is not specified in the config.properties file");
 		}
 	}
-	
+
 	public String getSkippedStepsScreenshot() {
 		String prop = properties.getProperty("skipped_steps_screenshot");
 		if (prop != null) {
 			return prop.trim();
 		} else {
-			throw new RuntimeException("Property skipped_steps_screenshot is not specified in the config.properties file");
+			throw new RuntimeException(
+					"Property skipped_steps_screenshot is not specified in the config.properties file");
 		}
 	}
-	
-	
+
 	public String getOverrideReports() {
 		String prop = properties.getProperty("override_reports");
 		if (prop != null) {
@@ -122,7 +120,7 @@ public class ConfigLoader {
 			throw new RuntimeException("Property override_reports is not specified in the config.properties file");
 		}
 	}
-	
+
 	public String getSendEmailToUsers() {
 		String prop = properties.getProperty("send_email_to_users");
 		if (prop != null) {
@@ -131,7 +129,5 @@ public class ConfigLoader {
 			throw new RuntimeException("Property send_email_to_users is not specified in the config.properties file");
 		}
 	}
-	
-	
 
 }

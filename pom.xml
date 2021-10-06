@@ -15,7 +15,7 @@
 		<!-- You can pass the Testng.xml file using Maven cmd line and you can 
 			directly run the project using mvn clean test -->
 		<!-- For local run -> it will go for testng_local.xml -->
-		<suiteFile>testng_local.xml</suiteFile>
+		<suiteFile>testng_Local.xml</suiteFile>
 		<aspectj.version>1.9.4</aspectj.version>
 		<!--By default = 2 -->
 		<browserInstances>2</browserInstances>

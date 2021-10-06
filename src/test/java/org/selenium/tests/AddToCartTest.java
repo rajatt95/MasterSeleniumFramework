@@ -2,7 +2,7 @@ package org.selenium.tests;
 
 import java.io.IOException;
 
-import org.selenium.dataproviders.MyDataProvider;
+import org.selenium.dataproviders.JSONDataProvider;
 import org.selenium.pom.base.BaseTest;
 import org.selenium.pom.objects.Product;
 import org.selenium.pom.pages.CartPage;
@@ -46,7 +46,7 @@ public class AddToCartTest extends BaseTest {
 		Assert.assertEquals(cartPage.getProductName(), product.getName()+"FAIL");
 	}
 	
-	@Test(dataProvider = "getFeaturedProducts",dataProviderClass = MyDataProvider.class)
+	@Test(dataProvider = "getFeaturedProducts",dataProviderClass = JSONDataProvider.class)
 	public void addToCartFeaturedProducts(Product product) throws IOException {
 		System.out.println("------------------------------------Product: "+product);
 		CartPage cartPage=new HomePage(getDriver()).
