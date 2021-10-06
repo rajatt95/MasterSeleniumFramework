@@ -45,4 +45,4 @@ Updations done:
 3. If you want to run it using maven command, then, 
  - mvn clean test
  - mvn clean test -Dbrowser=EDGE -DsuiteFile=testng_Jenkins.xml -DbrowserInstances=5 -Denv=STAGE
-   NOTE: stg_config.properties is the default configuration file.
+ - **NOTE:** stg_config.properties is the default configuration file.
