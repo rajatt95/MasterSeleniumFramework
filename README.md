@@ -26,7 +26,7 @@ Updations done:
 **User has options for customization**
 ![image](https://user-images.githubusercontent.com/26399692/135927821-1e293278-14f2-4ad2-94dc-5505b080680d.png)
 ------------------------------------------------------------
-**Email to Users**
+**Email to User(s) using Java mail API**
 ![image](https://user-images.githubusercontent.com/26399692/135975570-d520d163-a7eb-4695-b22c-a25979415ef5.png)
 ------------------------------------------------------------
 **Others:**
