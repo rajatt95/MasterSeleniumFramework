@@ -46,3 +46,8 @@ Updations done:
  - mvn clean test
  - mvn clean test -Dbrowser=EDGE -DsuiteFile=testng_Jenkins.xml -DbrowserInstances=5 -Denv=STAGE
  - **NOTE:** stg_config.properties is the default configuration file.
+4. To view the Allure reports 
+ - Setup the Allure in your machine
+ - Go to URL (https://docs.qameta.io/allure/) -> Search for Manual installation -> Steps are mentioned
+ - Go to your project location
+ - Open command prompt -> allure serve allure-results
