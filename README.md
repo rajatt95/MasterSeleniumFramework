@@ -53,8 +53,6 @@ Updations done:
  - Open command prompt -> allure serve allure-results
 ------------------------------------------------------------
 **How to run the Project from Jenkins**
-[Final-Selenium-Github-ActiveChoiceParams.pdf](https://github.com/rajatt95/MasterSeleniumFramework/files/7314832/Final-Selenium-Github-ActiveChoiceParams.pdf)
-![image](https://user-images.githubusercontent.com/26399692/136640343-edda414a-9d7d-4dc7-9c3d-ca223384c403.png)
-
-
-
+[__Final-OC_Selenium-Github-ActiveChoiceParams.pdf](https://github.com/rajatt95/MasterSeleniumFramework/files/7314914/__Final-OC_Selenium-Github-ActiveChoiceParams.pdf)
+![image](https://user-images.githubusercontent.com/26399692/136642687-ce999564-df0a-4c64-a4e5-bccc05ef0388.png)
+------------------------------------------------------------
