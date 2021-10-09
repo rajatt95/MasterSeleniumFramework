@@ -54,5 +54,7 @@ Updations done:
 ------------------------------------------------------------
 **How to run the Project from Jenkins**
 [Final-Selenium-Github-ActiveChoiceParams.pdf](https://github.com/rajatt95/MasterSeleniumFramework/files/7314832/Final-Selenium-Github-ActiveChoiceParams.pdf)
+![image](https://user-images.githubusercontent.com/26399692/136640343-edda414a-9d7d-4dc7-9c3d-ca223384c403.png)
+
 
 
