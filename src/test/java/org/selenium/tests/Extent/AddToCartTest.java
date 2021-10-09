@@ -25,6 +25,7 @@ import io.qameta.allure.TmsLink;
 @Feature("Feature - Product AddToCart")
 public class AddToCartTest extends BaseTest {
 
+	
 	@Story("Story - User should be able to add the Product into Cart")
 	@Link("https://example.org")
 	@Link(name = "allure", type = "mylink")
@@ -33,7 +34,7 @@ public class AddToCartTest extends BaseTest {
 	@TmsLink("test-1")
 	@Description("addToCartFromStorePage - This description is coming from Allure Annotation")
 	@FrameworkAnnotation(author = { AuthorType.GAUTAM, AuthorType.RAJAT}, category = { CategoryType.SANITY,CategoryType.REGRESSION })
-	@Test(description = "addToCartFromStorePage - This description is coming from TestNG annotation property")
+	@Test(groups = {"SANITY","REGRESSION"}, description = "addToCartFromStorePage - This description is coming from TestNG annotation property")
 	public void addToCartFromStorePage() throws IOException {
 
 		Product product = new Product(1215);

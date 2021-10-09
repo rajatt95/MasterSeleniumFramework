@@ -7,6 +7,7 @@
 		<listener
 			class-name="org.selenium.listeners.AnnotationTransformer"></listener>
 		<listener class-name="org.selenium.listeners.ListenerClass"></listener>
+		<listener class-name="org.selenium.listeners.MethodInterceptor"></listener>
 	</listeners>
 
 	<!--thread-count="2" -->

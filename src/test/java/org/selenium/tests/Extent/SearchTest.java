@@ -10,15 +10,13 @@ import org.testng.annotations.Test;
 
 public class SearchTest extends BaseTest {
 
-	@FrameworkAnnotation(author = { AuthorType.RAJAT, AuthorType.PANKAJ}, category = { CategoryType.SANITY,CategoryType.BVT })
-	@Test
+	@FrameworkAnnotation(author = { AuthorType.RAJAT, AuthorType.PANKAJ }, category = { CategoryType.SANITY,
+			CategoryType.BVT,CategoryType.REGRESSION })
+	@Test(groups = { "SANITY", "BVT", "REGRESSION" })
 	public void searchWithPartialMatch() {
 
 		String searchFor = "Blue";
-		StorePage storePage = new StorePage(getDriver()).
-				load().
-				enterTextInSearchField(searchFor).
-				clickSearchBtn();
+		StorePage storePage = new StorePage(getDriver()).load().enterTextInSearchField(searchFor).clickSearchBtn();
 
 		Assert.assertEquals(storePage.getTitle(), "Search results: “" + searchFor + "”");
 

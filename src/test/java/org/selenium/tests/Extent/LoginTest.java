@@ -17,8 +17,9 @@ import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
 
-	@FrameworkAnnotation(author = { AuthorType.GAUTAM, AuthorType.PANKAJ}, category = { CategoryType.SANITY,CategoryType.SMOKE })
-	@Test
+	@FrameworkAnnotation(author = { AuthorType.GAUTAM, AuthorType.PANKAJ}, 
+			category = { CategoryType.SANITY,CategoryType.SMOKE,CategoryType.REGRESSION })
+	@Test(groups = {"SANITY","SMOKE","REGRESSION"})
 	public void loginDuringCheckout() throws IOException, InterruptedException {
 
 		/* Do this using RestAssured library - WebService part */

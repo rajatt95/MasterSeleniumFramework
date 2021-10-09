@@ -6,6 +6,8 @@
 		<listener
 			class-name="org.selenium.listeners.AnnotationTransformer"></listener>
 		<listener class-name="org.selenium.listeners.ListenerClass"></listener>
+		<listener
+			class-name="org.selenium.listeners.MethodInterceptor"></listener>
 	</listeners>
 	<test thread-count="2"
 		name="Regression Tests execution over Chrome 

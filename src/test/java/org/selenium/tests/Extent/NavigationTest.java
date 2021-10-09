@@ -11,8 +11,9 @@ import org.testng.annotations.Test;
 
 public class NavigationTest extends BaseTest{
 
-	@FrameworkAnnotation(author = { AuthorType.RAJAT, AuthorType.NISHANT}, category = { CategoryType.BVT,CategoryType.REGRESSION })
-	@Test
+	@FrameworkAnnotation(author = { AuthorType.RAJAT, AuthorType.NISHANT}, 
+			category = { CategoryType.BVT,CategoryType.REGRESSION })
+	@Test(groups = {"BVT","REGRESSION"})
 	public void navigateFromHomeToStoreUsingMainMenu() {
 		
 		StorePage storePage =
