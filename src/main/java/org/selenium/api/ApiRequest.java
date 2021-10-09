@@ -16,7 +16,7 @@ public class ApiRequest extends SpecBuilder{
 			Headers headers, 
 			HashMap<String, Object> formParams,
 			Cookies cookies) {
-		return 
+		return
 				given(getRequestSpec()).
 					headers(headers).
 					formParams(formParams).
@@ -26,12 +26,13 @@ public class ApiRequest extends SpecBuilder{
 				then().
 					spec(getResponseSpec()).
 					extract().response();
+		
 	}
 	
 	public static Response get(
 			String endPoint,
 			Cookies cookies) {
-		return 
+		return
 				given(getRequestSpec()).
 					cookies(cookies).
 				when().
@@ -39,6 +40,6 @@ public class ApiRequest extends SpecBuilder{
 				then().
 				spec(getResponseSpec()).
 				extract().response();
-				
+		 		
 }
 }

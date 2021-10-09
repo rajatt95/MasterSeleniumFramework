@@ -10,14 +10,9 @@
 		<maven.compiler.source>8</maven.compiler.source>
 		<maven.compiler.target>8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<!-- 03_testng_package_2_Browser_Seq.xml - This xml file will be taken 
-			as default -->
-		<!-- You can pass the Testng.xml file using Maven cmd line and you can 
-			directly run the project using mvn clean test -->
-		<!-- For local run -> it will go for testng_local.xml -->
+		<!-- DEFAULT -->
 		<suiteFile>testng_Local.xml</suiteFile>
 		<aspectj.version>1.9.4</aspectj.version>
-		<!--By default = 2 -->
 		<browserInstances>2</browserInstances>
 	</properties>
 
@@ -29,13 +24,12 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.0.0-M5</version>
 				<configuration>
-					<parallel>methods</parallel>
-					<!-- <parallel>both</parallel> -->
+					<!-- parallel="methods" added in testng.xml file -->
+					<!-- <parallel>methods</parallel> -->
 					<threadCount>${browserInstances}</threadCount>
 					<suiteXmlFiles>
 						<!-- You can add more than 1 XML files here also -->
 						<!-- <suiteXmlFile>testng.xml</suiteXmlFile> -->
-						<!-- <suiteXmlFile>03_testng_package_2_Browser_Seq.xml</suiteXmlFile> -->
 						<suiteXmlFile>${suiteFile}</suiteXmlFile>
 					</suiteXmlFiles>
 					<argLine>
@@ -52,6 +46,7 @@
 			</plugin>
 		</plugins>
 	</build>
+
 
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->

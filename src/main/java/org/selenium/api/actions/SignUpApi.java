@@ -10,6 +10,10 @@ import org.jsoup.nodes.Element;
 import org.selenium.api.ApiRequest;
 import org.selenium.pom.objects.User;
 import org.selenium.pom.utils.ConfigLoader;
+import org.selenium.reports.ExtentLogger;
+
+import com.aventstack.extentreports.markuputils.CodeLanguage;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 import io.restassured.http.Cookies;
 import io.restassured.http.Header;
@@ -69,6 +73,7 @@ public class SignUpApi {
 		if (response.getStatusCode() != 200) {
 			throw new RuntimeException("Failed to fetch the account, HTTP status code: " + response.getStatusCode());
 		}
+		//ExtentLogger.pass(MarkupHelper.createCodeBlock(response.asString(), CodeLanguage.JSON));
 		return response;
 	}
 	
@@ -95,12 +100,12 @@ public class SignUpApi {
 		//Response response=ApiRequest.post(Endpoint.ACCOUNT.url, headers, formParams, cookies);
 		Response response=ApiRequest.post("/account", headers, formParams, cookies);
 		
-
+		
 		System.out.println("Response status code: "+response.getStatusCode());
 		if (response.getStatusCode() != 302) {
 			throw new RuntimeException("Failed to register the account, HTTP status code: " + response.getStatusCode());
 		}
-		
+		//ExtentLogger.pass(MarkupHelper.createCodeBlock(response.asString(), CodeLanguage.JSON));
 		this.cookies=response.getDetailedCookies();
 		return response;
 	}

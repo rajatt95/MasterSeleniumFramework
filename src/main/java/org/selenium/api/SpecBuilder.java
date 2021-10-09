@@ -20,12 +20,13 @@ public class SpecBuilder {
 	
 	public static ResponseSpecification getResponseSpec() {
 		return new ResponseSpecBuilder().
-				log(LogDetail.METHOD).
-				log(LogDetail.URI).
-				log(LogDetail.PARAMS).
-				log(LogDetail.STATUS).
-				log(LogDetail.HEADERS).
-				log(LogDetail.COOKIES).
+//				log(LogDetail.METHOD).
+//				log(LogDetail.URI).
+//				log(LogDetail.PARAMS).
+//				log(LogDetail.STATUS).
+//				log(LogDetail.HEADERS).
+//				log(LogDetail.COOKIES).
+				log(LogDetail.ALL).
 				build();
 				
 	}

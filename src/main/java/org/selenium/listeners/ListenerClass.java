@@ -39,6 +39,8 @@ public class ListenerClass implements ITestListener, ISuiteListener {
 
 	@Override
 	public void onTestStart(ITestResult result) {
+
+		System.out.println("onTestStart() ");
 		count_totalTCs = count_totalTCs + 1;
 		ExtentReport.createTest(result.getMethod().getMethodName());
 		// ExtentReport.createTest(result.getMethod().getDescription());
@@ -73,7 +75,7 @@ public class ListenerClass implements ITestListener, ISuiteListener {
 		// TMB
 		// ExtentLogger.fail(result.getMethod().getMethodName() + " is failed");
 		// ExtentLogger.fail(result.getMethod().getMethodName() + " is failed", true);
-		ExtentLogger.fail(result.getThrowable().toString());
+		ExtentLogger.fail("<b><i>" + result.getThrowable().toString() + "</i></b>");
 		// ExtentLogger.fail(Arrays.toString(result.getThrowable().getStackTrace()));
 
 		// ExtentLogger.info("------------------------------------------------");
@@ -96,8 +98,8 @@ public class ListenerClass implements ITestListener, ISuiteListener {
 		// ExtentLogger.skip(result.getMethod().getMethodName() + " is skipped");
 		// ExtentLogger.skip(result.getMethod().getMethodName() + " is skipped", true);
 
-		ExtentLogger.skip(result.getThrowable().toString());
-
+		//ExtentLogger.skip(result.getThrowable().toString());
+		ExtentLogger.skip("<b><i>" + result.getThrowable().toString() + "</i></b>");
 		// Rajat
 		String logText = "<b>" + result.getMethod().getMethodName() + " is skipped.</b>";
 		Markup markup_message = MarkupHelper.createLabel(logText, ExtentColor.YELLOW);

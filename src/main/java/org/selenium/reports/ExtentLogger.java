@@ -36,6 +36,10 @@ public final class ExtentLogger {
 		ExtentManager.getExtentTest().skip(message);
 	}
 
+	public static void info(Markup message) {
+		ExtentManager.getExtentTest().info(message);
+	}
+	
 	public static void info(String message) {
 		ExtentManager.getExtentTest().info(message);
 	}
@@ -46,7 +50,6 @@ public final class ExtentLogger {
 		// && isScreeshotNeeded) {
 		if (ConfigLoader.getInstance().getPassedStepsScreenshot().equalsIgnoreCase(FrameworkConstants.getYes())
 				&& isScreeshotNeeded) {
-
 			ExtentManager.getExtentTest().pass(message,
 					MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotUtils.getBase64Image()).build());
 		} else {
