@@ -29,7 +29,7 @@ Updations done:
 **Email to User(s) using Java mail API**
 ![image](https://user-images.githubusercontent.com/26399692/135975570-d520d163-a7eb-4695-b22c-a25979415ef5.png)
 ------------------------------------------------------------
-**Others:**
+**Others implementations:**
 1. Retry failed test cases
 2. Custom Enums, Exceptions, Annotations 
 3. Serialization and Deserialization using Jackson-Databind dependency
@@ -42,11 +42,8 @@ Updations done:
 1. Pull the code into your machine and import in IDE (Eclipse/intelliJ).
 2. Go to testng_Local.xml -> Run this file as TestNG suite
   It should start the execution -> Parallel Cross Browser Testing.
-3. If you want to run it using maven command, then, 
- - mvn clean test
- - mvn clean test -Dbrowser=EDGE -DsuiteFile=testng_Jenkins.xml -DbrowserInstances=5 -Denv=STAGE
  - **NOTE:** stg_config.properties is the default configuration file.
-4. To view the Allure reports 
+3. To view the Allure reports 
  - Setup the Allure in your machine
  - Go to URL (https://docs.qameta.io/allure/) -> Search for Manual installation -> Steps are mentioned
  - Go to your project location
