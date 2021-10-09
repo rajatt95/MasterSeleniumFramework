@@ -38,7 +38,7 @@ Updations done:
 6. Automatically open the report after tests execution.
 7. Send EMail using Java mail API to User(s) with attachment(s).
 ------------------------------------------------------------
-**How to run the Project**
+**How to run the Project from Local machine**
 1. Pull the code into your machine and import in IDE (Eclipse/intelliJ).
 2. Go to testng_Local.xml -> Run this file as TestNG suite
   It should start the execution -> Parallel Cross Browser Testing.
@@ -51,3 +51,8 @@ Updations done:
  - Go to URL (https://docs.qameta.io/allure/) -> Search for Manual installation -> Steps are mentioned
  - Go to your project location
  - Open command prompt -> allure serve allure-results
+------------------------------------------------------------
+**How to run the Project from Jenkins**
+[Final-Selenium-Github-ActiveChoiceParams.pdf](https://github.com/rajatt95/MasterSeleniumFramework/files/7314832/Final-Selenium-Github-ActiveChoiceParams.pdf)
+
+
