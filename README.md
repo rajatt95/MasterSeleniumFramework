@@ -56,3 +56,6 @@ Updations done:
 [__Final-OC_Selenium-Github-ActiveChoiceParams.pdf](https://github.com/rajatt95/MasterSeleniumFramework/files/7314914/__Final-OC_Selenium-Github-ActiveChoiceParams.pdf)
 ![image](https://user-images.githubusercontent.com/26399692/136642687-ce999564-df0a-4c64-a4e5-bccc05ef0388.png)
 ------------------------------------------------------------
+Email to User(s) using Jenkins:
+![image](https://user-images.githubusercontent.com/26399692/136642963-4a658292-b024-421c-ad7c-ada22777128b.png)
+------------------------------------------------------------
