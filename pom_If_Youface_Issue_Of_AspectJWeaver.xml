@@ -111,6 +111,7 @@
 			<artifactId>allure-testng</artifactId>
 			<version>2.14.0</version>
 		</dependency>
+		
 
 		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 		<dependency>
