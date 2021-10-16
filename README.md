@@ -36,7 +36,9 @@ Updations done:
 4. Data Driven testing using JSON file
 5. Zip the ExtentReports directory into Project path (you can send this Zip file as well as an Attachment in Email)
 6. Automatically open the report after tests execution.
-7. Send EMail using Java mail API to User(s) with attachment(s).
+7. Request details added in ExtentReports:
+<img width="938" alt="Reports" src="https://user-images.githubusercontent.com/26399692/137579695-25e94096-fce3-4c1b-936c-65b62a976c36.png">
+9. Send EMail using Java mail API to User(s) with attachment(s).
         https://mvnrepository.com/artifact/javax.mail/mail/1.4.7
         https://www.tutorialspoint.com/java/java_sending_email.htm
         Gmail -> 
