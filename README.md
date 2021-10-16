@@ -38,16 +38,13 @@ Updations done:
 6. Automatically open the report after tests execution.
 7. Request details added in ExtentReports:
 <img width="938" alt="Reports" src="https://user-images.githubusercontent.com/26399692/137579695-25e94096-fce3-4c1b-936c-65b62a976c36.png">
-9. Send EMail using Java mail API to User(s) with attachment(s).
-        https://mvnrepository.com/artifact/javax.mail/mail/1.4.7
-        https://www.tutorialspoint.com/java/java_sending_email.htm
-        Gmail -> 
-        Manage your Google account: 
+9. Send EMail using Java mail API to User(s) with attachment(s).       
+        - https://mvnrepository.com/artifact/javax.mail/mail/1.4.7
+        - https://www.tutorialspoint.com/java/java_sending_email.htm
+        - Gmail -> Manage your Google account: 
         ![image](https://user-images.githubusercontent.com/26399692/137579937-12c01d4d-1f62-4867-8c40-c056391d3b7e.png)
-        Security -> 
-        Turn on : Less Secure App access:
+        - Security -> Turn on : Less Secure App access:
         ![image](https://user-images.githubusercontent.com/26399692/137579959-e1554f06-5583-4ad1-ad28-ed69ed27b922.png)
-
 
 ------------------------------------------------------------
 **How to run the Project from Local machine**
