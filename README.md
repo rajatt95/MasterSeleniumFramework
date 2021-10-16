@@ -43,10 +43,11 @@ Updations done:
         https://www.tutorialspoint.com/java/java_sending_email.htm
         Gmail -> 
         Manage your Google account: 
-        ![image](https://user-images.githubusercontent.com/26399692/137579797-578b5235-d66e-4254-8f44-befabdf5696d.png)-> 
+        ![image](https://user-images.githubusercontent.com/26399692/137579937-12c01d4d-1f62-4867-8c40-c056391d3b7e.png)
         Security -> 
         Turn on : Less Secure App access:
-        ![image](https://user-images.githubusercontent.com/26399692/137579818-ce2b441c-20da-45a7-a04e-18a68250a1c9.png)
+        ![image](https://user-images.githubusercontent.com/26399692/137579959-e1554f06-5583-4ad1-ad28-ed69ed27b922.png)
+
 
 ------------------------------------------------------------
 **How to run the Project from Local machine**
