@@ -42,10 +42,11 @@ Updations done:
         https://mvnrepository.com/artifact/javax.mail/mail/1.4.7
         https://www.tutorialspoint.com/java/java_sending_email.htm
         Gmail -> 
-        Manage your Google account ![image](https://user-images.githubusercontent.com/26399692/137579797-578b5235-d66e-4254-8f44-befabdf5696d.png)-> 
+        Manage your Google account: 
+        ![image](https://user-images.githubusercontent.com/26399692/137579797-578b5235-d66e-4254-8f44-befabdf5696d.png)-> 
         Security -> 
-        Turn on : Less Secure App access
-![image](https://user-images.githubusercontent.com/26399692/137579818-ce2b441c-20da-45a7-a04e-18a68250a1c9.png)
+        Turn on : Less Secure App access:
+        ![image](https://user-images.githubusercontent.com/26399692/137579818-ce2b441c-20da-45a7-a04e-18a68250a1c9.png)
 
 ------------------------------------------------------------
 **How to run the Project from Local machine**
