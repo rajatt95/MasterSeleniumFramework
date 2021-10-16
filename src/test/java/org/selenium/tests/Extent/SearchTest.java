@@ -1,7 +1,7 @@
 package org.selenium.tests.Extent;
 
 import org.selenium.annotations.FrameworkAnnotation;
-import org.selenium.pom.base.BaseTest;
+import org.selenium.base.BaseTest;
 import org.selenium.pom.enums.AuthorType;
 import org.selenium.pom.enums.CategoryType;
 import org.selenium.pom.pages.StorePage;
@@ -16,7 +16,11 @@ public class SearchTest extends BaseTest {
 	public void searchWithPartialMatch() {
 
 		String searchFor = "Blue";
-		StorePage storePage = new StorePage(getDriver()).load().enterTextInSearchField(searchFor).clickSearchBtn();
+		StorePage storePage = 
+				new StorePage(getDriver()).
+					load().
+					enterTextInSearchField(searchFor).
+					clickSearchBtn();
 
 		Assert.assertEquals(storePage.getTitle(), "Search results: “" + searchFor + "”");
 

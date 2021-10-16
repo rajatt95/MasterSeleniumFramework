@@ -1,19 +1,14 @@
 package org.selenium.api.actions;
 
-import static io.restassured.RestAssured.given;
-
 import java.util.HashMap;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.selenium.api.ApiRequest;
+import org.selenium.constants.FrameworkConstants;
 import org.selenium.pom.objects.User;
-import org.selenium.pom.utils.ConfigLoader;
-import org.selenium.reports.ExtentLogger;
-
-import com.aventstack.extentreports.markuputils.CodeLanguage;
-import com.aventstack.extentreports.markuputils.MarkupHelper;
+import org.selenium.pom.utils.VerificationManager;
 
 import io.restassured.http.Cookies;
 import io.restassured.http.Header;
@@ -32,19 +27,19 @@ public class SignUpApi {
 		this.cookies = cookies;
 	}
 
-	private String fetchRegisterNonceValueUsingGroovyGPath() {
-		Response response = getAccount();
-
-		/**
-		 * We are getting this in the Response in the API call for getAccount()
-		 * 
-		 * <input type="hidden" id="woocommerce-register-nonce" name=
-		 * "woocommerce-register-nonce" value="656055dd4d"/>
-		 * 
-		 * We are trying to fetch this value --> 656055dd4d
-		 */
-		return response.htmlPath().getString("**.findAll { it.@name == 'woocommerce-register-nonce' }.@value");
-	}
+//	private String fetchRegisterNonceValueUsingGroovyGPath() {
+//		Response response = getAccount();
+//
+//		/**
+//		 * We are getting this in the Response in the API call for getAccount()
+//		 * 
+//		 * <input type="hidden" id="woocommerce-register-nonce" name=
+//		 * "woocommerce-register-nonce" value="656055dd4d"/>
+//		 * 
+//		 * We are trying to fetch this value --> 656055dd4d
+//		 */
+//		return response.htmlPath().getString("**.findAll { it.@name == 'woocommerce-register-nonce' }.@value");
+//	}
 
 	private String fetchRegisterNonceValueUsingJSoup() {
 		Response response = getAccount();
@@ -59,21 +54,23 @@ public class SignUpApi {
 
 	private Response getAccount() {
 		Cookies cookies = new Cookies();
-		Response response = 
-				given().
-					baseUri(ConfigLoader.getInstance().getBaseUrl()).
-					cookies(cookies).
-					log().all().
-				when().
-					get("/account").
-				then().
-					log().all().extract().response();
+//		Response response = 
+//				given().
+//					baseUri(ConfigLoader.getInstance().getBaseUrl()).
+//					cookies(cookies).
+//					log().all().
+//				when().
+//					get("/account").
+//				then().
+//					log().all().extract().response();
 
-		System.out.println("Response status code: "+response.getStatusCode());
-		if (response.getStatusCode() != 200) {
-			throw new RuntimeException("Failed to fetch the account, HTTP status code: " + response.getStatusCode());
-		}
+		Response response=ApiRequest.get("account", cookies);
+	
+		VerificationManager.validateResponse(response.getStatusCode(),200, 
+				  FrameworkConstants.ASSERTION_FOR_RESPONSE_STATUS_CODE +" -  <b> <u>Fetch the account details </b> </u>");
+
 		//ExtentLogger.pass(MarkupHelper.createCodeBlock(response.asString(), CodeLanguage.JSON));
+		//ExtentLogger.pass(response.asString());
 		return response;
 	}
 	
@@ -90,22 +87,26 @@ public class SignUpApi {
 		formParams.put("woocommerce-register-nonce", fetchRegisterNonceValueUsingJSoup());
 		formParams.put("register", "Register");
 		
-		/*
-		 * Response response = given().
-		 * baseUri(ConfigLoader.getInstance().getBaseUrl()). headers(headers).
-		 * formParams(formParams). cookies(cookies). log().all(). when()
-		 * .post("/account"). then(). log().all().extract().response();
-		 */
+		
+//		  Response response = 
+//				  given().
+//				  	baseUri(ConfigLoader.getInstance().getBaseUrl()). 
+//				  	headers(headers).
+//				  	formParams(formParams). 
+//				  	cookies(cookies). 
+//				  	log().all(). 
+//				  when()
+//				  	.post("/account").
+//				  then(). 
+//				  	log().all().extract().response();
+		 
 		
 		//Response response=ApiRequest.post(Endpoint.ACCOUNT.url, headers, formParams, cookies);
 		Response response=ApiRequest.post("/account", headers, formParams, cookies);
 		
+		VerificationManager.validateResponse(response.getStatusCode(),302, 
+				  FrameworkConstants.ASSERTION_FOR_RESPONSE_STATUS_CODE +" - <b> <u> Register the account </u> </b>");
 		
-		System.out.println("Response status code: "+response.getStatusCode());
-		if (response.getStatusCode() != 302) {
-			throw new RuntimeException("Failed to register the account, HTTP status code: " + response.getStatusCode());
-		}
-		//ExtentLogger.pass(MarkupHelper.createCodeBlock(response.asString(), CodeLanguage.JSON));
 		this.cookies=response.getDetailedCookies();
 		return response;
 	}

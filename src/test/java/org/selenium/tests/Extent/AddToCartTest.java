@@ -3,7 +3,7 @@ package org.selenium.tests.Extent;
 import java.io.IOException;
 
 import org.selenium.annotations.FrameworkAnnotation;
-import org.selenium.pom.base.BaseTest;
+import org.selenium.base.BaseTest;
 import org.selenium.pom.enums.AuthorType;
 import org.selenium.pom.enums.CategoryType;
 import org.selenium.pom.objects.Product;

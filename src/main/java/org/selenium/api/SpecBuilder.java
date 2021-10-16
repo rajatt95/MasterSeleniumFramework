@@ -9,7 +9,7 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
 public class SpecBuilder {
-
+	
 	public static RequestSpecification getRequestSpec() {
 		return new RequestSpecBuilder().
 					//setBaseUri(Environment.getUrl()).
@@ -28,7 +28,5 @@ public class SpecBuilder {
 //				log(LogDetail.COOKIES).
 				log(LogDetail.ALL).
 				build();
-				
 	}
-	
 }

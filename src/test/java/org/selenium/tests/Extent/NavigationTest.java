@@ -1,7 +1,7 @@
 package org.selenium.tests.Extent;
 
 import org.selenium.annotations.FrameworkAnnotation;
-import org.selenium.pom.base.BaseTest;
+import org.selenium.base.BaseTest;
 import org.selenium.pom.enums.AuthorType;
 import org.selenium.pom.enums.CategoryType;
 import org.selenium.pom.pages.HomePage;
@@ -21,7 +21,7 @@ public class NavigationTest extends BaseTest{
 					load().
 					getMyHeader().
 					navigateToStoreUsingMenu();
-	
+		
 		Assert.assertEquals(storePage.getTitle(), "Store");
 
 	}

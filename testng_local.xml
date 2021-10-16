@@ -36,7 +36,6 @@
 			<package name="org.selenium.tests.Extent"></package>
 		</packages>
 	</test>
-
 	<test thread-count="2"
 		name="Regression Tests execution over Opera 
 		Browser"
@@ -46,7 +45,4 @@
 			<package name="org.selenium.tests.Extent"></package>
 		</packages>
 	</test>
-
-
-
 </suite> <!-- Suite -->

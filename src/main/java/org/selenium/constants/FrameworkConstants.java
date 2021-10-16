@@ -11,6 +11,11 @@ public class FrameworkConstants {
 	// private static final String RESOURCES_PATH = System.getProperty("user.dir") +
 	// "/src/test/resources";
 
+	
+	public static final String ASSERTION_FOR_RESPONSE_STATUS_CODE = "Assertion for Response Status Code";
+	public static final String ASSERTION_FOR_RESPONSE_HEADER = "Assertion for Response Headers";
+	public static final String ASSERTION_FOR_RESPONSE_CUSTOM_FIELD = "Assertion for Response Custom Field";
+
 	private static final String YES = "yes";
 	private static final String NO = "no";
 

@@ -5,7 +5,7 @@ import java.io.IOException;
 import org.selenium.annotations.FrameworkAnnotation;
 import org.selenium.api.actions.CartApi;
 import org.selenium.api.actions.SignUpApi;
-import org.selenium.pom.base.BaseTest;
+import org.selenium.base.BaseTest;
 import org.selenium.pom.enums.AuthorType;
 import org.selenium.pom.enums.CategoryType;
 import org.selenium.pom.objects.Product;
@@ -20,7 +20,7 @@ public class LoginTest extends BaseTest {
 	@FrameworkAnnotation(author = { AuthorType.GAUTAM, AuthorType.PANKAJ}, 
 			category = { CategoryType.SANITY,CategoryType.SMOKE,CategoryType.REGRESSION })
 	@Test(groups = {"SANITY","SMOKE","REGRESSION"})
-	public void loginDuringCheckout() throws IOException, InterruptedException {
+	public void loginDuringCheckout_ATOMIC_TEST() throws IOException, InterruptedException {
 
 		/* Do this using RestAssured library - WebService part */
 		User user = getUser();
@@ -42,7 +42,9 @@ public class LoginTest extends BaseTest {
 
 		checkoutPage.load();
 		Thread.sleep(5000);
-		checkoutPage.clickHereToLoginLink().login(user);
+		checkoutPage.
+			clickHereToLoginLink().
+			login(user);
 		Thread.sleep(5000);
 		Assert.assertTrue(checkoutPage.getProductName().contains(product.getName()));
 

@@ -1,14 +1,10 @@
 package org.selenium.api.actions;
 
-import static io.restassured.RestAssured.given;
-
 import java.util.HashMap;
 
-import org.selenium.pom.utils.ConfigLoader;
-import org.selenium.reports.ExtentLogger;
-
-import com.aventstack.extentreports.markuputils.CodeLanguage;
-import com.aventstack.extentreports.markuputils.MarkupHelper;
+import org.selenium.api.ApiRequest;
+import org.selenium.constants.FrameworkConstants;
+import org.selenium.pom.utils.VerificationManager;
 
 import io.restassured.http.Cookies;
 import io.restassured.http.Header;
@@ -56,28 +52,24 @@ public class CartApi {
 			cookies = new Cookies();
 		}
 
-		Response response = 
-				given().
-					baseUri(ConfigLoader.getInstance().getBaseUrl()).
-					headers(headers).
-					formParams(formParams).
-					cookies(cookies).
-					log().all().
-				when().
-					post("/?wc-ajax=add_to_cart").
-				then().
-					log().all().
-					extract().response();
+//		Response response = 
+//				given().
+//					baseUri(ConfigLoader.getInstance().getBaseUrl()).
+//					headers(headers).
+//					formParams(formParams).
+//					cookies(cookies).
+//					log().all().
+//				when().
+//					post("/?wc-ajax=add_to_cart").
+//				then().
+//					log().all().
+//					extract().response();
 
+		Response response=ApiRequest.post("/?wc-ajax=add_to_cart", headers, formParams, cookies);		
 		
-
-		System.out.println("Response status code: " + response.getStatusCode());
-		if (response.getStatusCode() != 200) {
-			throw new RuntimeException("Failed to add the product " + productId + "to the Cart, HTTP status code: "
-					+ response.getStatusCode());
-		}
-		//ExtentLogger.pass(response.asPrettyString());
-		//ExtentLogger.pass(MarkupHelper.createCodeBlock(response.asString(), CodeLanguage.JSON));
+		VerificationManager.validateResponse(response.getStatusCode(),200, 
+				  FrameworkConstants.ASSERTION_FOR_RESPONSE_STATUS_CODE +" -  <b> <u> Add the product to the Cart </b> </u>");
+		
 		this.cookies = response.getDetailedCookies();
 		return response;
 

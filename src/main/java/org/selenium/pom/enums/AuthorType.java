@@ -8,5 +8,4 @@ public enum AuthorType {
 	NISHANT, 
 	GAUTAM, 
 	PANKAJ
-
 }

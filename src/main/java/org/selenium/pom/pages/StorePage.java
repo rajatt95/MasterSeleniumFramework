@@ -27,7 +27,7 @@ public class StorePage extends BasePage {
 		return wait.until(ExpectedConditions.urlContains("/store"));
 	}
 
-	private final By searchFld = By.id("woocommerce-product-search-field-0");
+	private final By vaibav = By.id("woocommerce-product-search-field-0");
 	private final By searchBtn = By.xpath("//button[normalize-space()='Search']");
 	private final By title = By.xpath("//h1[@class='woocommerce-products-header__title page-title']");
 
@@ -37,7 +37,7 @@ public class StorePage extends BasePage {
 	public StorePage enterTextInSearchField(String txt) {
 		// driver.findElement(searchFld).sendKeys(txt);
 		//wait.until(ExpectedConditions.visibilityOfElementLocated(searchFld)).sendKeys(txt);
-		sendKeys(searchFld, txt, WaitStrategy.PRESENCE, "Search Field");
+		sendKeys(vaibav, txt, WaitStrategy.PRESENCE, "Search Field");
 		return this;
 	}
 
