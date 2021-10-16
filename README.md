@@ -37,6 +37,13 @@ Updations done:
 5. Zip the ExtentReports directory into Project path (you can send this Zip file as well as an Attachment in Email)
 6. Automatically open the report after tests execution.
 7. Send EMail using Java mail API to User(s) with attachment(s).
+        https://mvnrepository.com/artifact/javax.mail/mail/1.4.7
+        https://www.tutorialspoint.com/java/java_sending_email.htm
+        Gmail -> 
+        Manage your Google account -> 
+        Security -> 
+        Turn on : Less Secure App access
+
 ------------------------------------------------------------
 **How to run the Project from Local machine**
 1. Pull the code into your machine and import in IDE (Eclipse/intelliJ).
