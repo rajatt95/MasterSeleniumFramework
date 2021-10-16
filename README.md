@@ -63,6 +63,6 @@ Updations done:
 ![image](https://user-images.githubusercontent.com/26399692/136642687-ce999564-df0a-4c64-a4e5-bccc05ef0388.png)
 ------------------------------------------------------------
 Email to User(s) using Jenkins:
-https://www.youtube.com/watch?v=MFgbp00hbVI&ab_channel=Mukeshotwani
+1. You can refer: https://www.youtube.com/watch?v=MFgbp00hbVI&ab_channel=Mukeshotwani
 ![image](https://user-images.githubusercontent.com/26399692/136642963-4a658292-b024-421c-ad7c-ada22777128b.png)
 ------------------------------------------------------------
