@@ -1,19 +1,12 @@
-package org.selenium.pom.utils;
+package org.selenium.utils;
 
 import java.util.Properties;
 
-import org.selenium.pom.enums.EnvType;
+import org.selenium.enums.EnvType;
 
 /*Singleton Design pattern*/
 public class ConfigLoader {
 
-	/* Default config file is stg_config.properties */
-	private static final String STG_CONFIG_PROPERTIES = "stg_config.properties";
-	private static final String PROD_CONFIG_PROPERTIES = "prod_config.properties";
-	private static final String QA_CONFIG_PROPERTIES = "qa_config.properties";
-	private static final String INT_CONFIG_PROPERTIES = "int_config.properties";
-
-	private static final String ENV = "env";
 	private static final String SEND_EMAIL_TO_USERS = "send_email_to_users";
 	private static final String OVERRIDE_REPORTS = "override_reports";
 	private static final String SKIPPED_STEPS_SCREENSHOT = "skipped_steps_screenshot";
@@ -24,6 +17,15 @@ public class ConfigLoader {
 	private static final String USERNAME = "username";
 	private static final String BASE_URL = "baseUrl";
 	private static final String REQUEST_DETAILS_IN_REPORTS = "request_details_in_reports";
+
+	private static final String ENV = "env";
+	private static final String CONFIG_PROPERTIES = "_config.properties";
+
+	/* Default config file is stg_config.properties */
+	private static final String STG_CONFIG_PROPERTIES = "stg" + CONFIG_PROPERTIES;
+	private static final String PROD_CONFIG_PROPERTIES = "prod" + CONFIG_PROPERTIES;
+	private static final String QA_CONFIG_PROPERTIES = "qa" + CONFIG_PROPERTIES;
+	private static final String INT_CONFIG_PROPERTIES = "int" + CONFIG_PROPERTIES;
 
 	private static final String RESOURCES_PATH = System.getProperty("user.dir") + "/src/test/resources/";
 	private Properties properties;
