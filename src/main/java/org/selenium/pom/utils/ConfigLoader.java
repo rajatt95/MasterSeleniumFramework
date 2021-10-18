@@ -7,6 +7,13 @@ import org.selenium.pom.enums.EnvType;
 /*Singleton Design pattern*/
 public class ConfigLoader {
 
+	/* Default config file is stg_config.properties */
+	private static final String STG_CONFIG_PROPERTIES = "stg_config.properties";
+	private static final String PROD_CONFIG_PROPERTIES = "prod_config.properties";
+	private static final String QA_CONFIG_PROPERTIES = "qa_config.properties";
+	private static final String INT_CONFIG_PROPERTIES = "int_config.properties";
+
+	private static final String ENV = "env";
 	private static final String SEND_EMAIL_TO_USERS = "send_email_to_users";
 	private static final String OVERRIDE_REPORTS = "override_reports";
 	private static final String SKIPPED_STEPS_SCREENSHOT = "skipped_steps_screenshot";
@@ -17,49 +24,57 @@ public class ConfigLoader {
 	private static final String USERNAME = "username";
 	private static final String BASE_URL = "baseUrl";
 	private static final String REQUEST_DETAILS_IN_REPORTS = "request_details_in_reports";
-	
-	
-	
+
 	private static final String RESOURCES_PATH = System.getProperty("user.dir") + "/src/test/resources/";
 	private Properties properties;
 	// private final Properties properties;
 	private static ConfigLoader configLoader;
 
-	
-	
 	private ConfigLoader() {
 
 		/* Setting EnvType.STAGE as default environment */
 		/*
-		 * This will check for the env value from Jenkins/Maven first. If it does not get any
-		 * input from Jenkins/mvn cmd line, then, will take stg_config.properties file as
-		 * default
+		 * This will check for the env value from Jenkins/Maven first. If it does not
+		 * get any input from Jenkins/mvn cmd line, then, will take
+		 * stg_config.properties file as default
 		 */
-		String env = System.getProperty("env", EnvType.STAGE.toString());
+		String env = System.getProperty(ENV, EnvType.STAGE.toString());
 
 		switch (EnvType.valueOf(env)) {
 		/* Only STAGE is working, Rest are taken for example */
 
 		case STAGE: {
-			properties = PropertyUtils.propertyLoader(RESOURCES_PATH + "stg_config.properties");
+			properties = getConfigPropertyFile(STG_CONFIG_PROPERTIES);
 			break;
 		}
 		case INT: {
-			properties = PropertyUtils.propertyLoader(RESOURCES_PATH + "int_config.properties");
+			properties = getConfigPropertyFile(INT_CONFIG_PROPERTIES);
 			break;
 		}
 		case QA: {
-			properties = PropertyUtils.propertyLoader(RESOURCES_PATH + "qa_config.properties");
+			properties = getConfigPropertyFile(QA_CONFIG_PROPERTIES);
 			break;
 		}
 		case PRODUCTION: {
-			properties = PropertyUtils.propertyLoader(RESOURCES_PATH + "prod_config.properties");
+			properties = getConfigPropertyFile(PROD_CONFIG_PROPERTIES);
 			break;
 		}
 		default: {
 			throw new IllegalStateException("Invalid EnvType: " + env);
 		}
+		}
+	}
 
+	private Properties getConfigPropertyFile(String configFile) {
+		return PropertyUtils.propertyLoader(RESOURCES_PATH + configFile);
+	}
+
+	private String getPropertyValue(String propertyKey) {
+		String prop = properties.getProperty(propertyKey);
+		if (prop != null) {
+			return prop.trim();
+		} else {
+			throw new RuntimeException("Property " + propertyKey + " is not specified in the config.properties file");
 		}
 	}
 
@@ -71,100 +86,43 @@ public class ConfigLoader {
 	}
 
 	public String getBaseUrl() {
-		String prop = properties.getProperty(BASE_URL);
-		if (prop != null) {
-			return prop;
-		} else {
-			throw new RuntimeException("Property "+BASE_URL+" is not specified in the config.properties file");
-		}
+		return getPropertyValue(BASE_URL);
 	}
 
 	public String getUsername() {
-		String prop = properties.getProperty(USERNAME);
-		if (prop != null) {
-			return prop;
-		} else {
-			throw new RuntimeException("Property "+USERNAME+" is not specified in the config.properties file");
-		}
+		return getPropertyValue(USERNAME);
 	}
 
 	public String getPassword() {
-		String prop = properties.getProperty(PASSWORD);
-		if (prop != null) {
-			return prop;
-		} else {
-			throw new RuntimeException("Property "+PASSWORD+" is not specified in the config.properties file");
-		}
+		return getPropertyValue(PASSWORD);
 	}
 
 	public String getFailedStepsScreenshot() {
-		String prop = properties.getProperty(FAILED_STEPS_SCREENSHOT);
-		if (prop != null) {
-			return prop.trim();
-		} else {
-			throw new RuntimeException(
-					"Property "+FAILED_STEPS_SCREENSHOT+" is not specified in the config.properties file");
-		}
+		return getPropertyValue(FAILED_STEPS_SCREENSHOT);
 	}
 
 	public String getPassedStepsScreenshot() {
-		String prop = properties.getProperty(PASSED_STEPS_SCREENSHOT);
-		if (prop != null) {
-			return prop.trim();
-		} else {
-			throw new RuntimeException(
-					"Property "+PASSED_STEPS_SCREENSHOT+" is not specified in the config.properties file");
-		}
+		return getPropertyValue(PASSED_STEPS_SCREENSHOT);
 	}
 
 	public String getSkippedStepsScreenshot() {
-		String prop = properties.getProperty(SKIPPED_STEPS_SCREENSHOT);
-		if (prop != null) {
-			return prop.trim();
-		} else {
-			throw new RuntimeException(
-					"Property "+SKIPPED_STEPS_SCREENSHOT+" is not specified in the config.properties file");
-		}
+		return getPropertyValue(SKIPPED_STEPS_SCREENSHOT);
 	}
-	
+
 	public String getRetryFailedTests() {
-		String prop = properties.getProperty(RETRY_FAILED_TESTS);
-		if (prop != null) {
-			return prop.trim();
-		} else {
-			throw new RuntimeException(
-					"Property "+RETRY_FAILED_TESTS+" is not specified in the config.properties file");
-		}
+		return getPropertyValue(RETRY_FAILED_TESTS);
 	}
-	
 
 	public String getOverrideReports() {
-		String prop = properties.getProperty(OVERRIDE_REPORTS);
-		if (prop != null) {
-			return prop.trim();
-		} else {
-			throw new RuntimeException("Property "+OVERRIDE_REPORTS+" is not specified in the config.properties file");
-		}
+		return getPropertyValue(OVERRIDE_REPORTS);
 	}
 
 	public String getSendEmailToUsers() {
-		String prop = properties.getProperty(SEND_EMAIL_TO_USERS);
-		if (prop != null) {
-			return prop.trim();
-		} else {
-			throw new RuntimeException("Property "+SEND_EMAIL_TO_USERS+" is not specified in the config.properties file");
-		}
+		return getPropertyValue(SEND_EMAIL_TO_USERS);
 	}
 
 	public String getRequestDetailsInReports() {
-		String prop = properties.getProperty(REQUEST_DETAILS_IN_REPORTS);
-		if (prop != null) {
-			return prop.trim();
-		} else {
-			throw new RuntimeException("Property "+REQUEST_DETAILS_IN_REPORTS+" is not specified in the config.properties file");
-		}
+		return getPropertyValue(REQUEST_DETAILS_IN_REPORTS);
 	}
-	
+
 }
-
-
