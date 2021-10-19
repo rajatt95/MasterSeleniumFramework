@@ -5,8 +5,8 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import org.selenium.pom.enums.AuthorType;
-import org.selenium.pom.enums.CategoryType;
+import org.selenium.enums.AuthorType;
+import org.selenium.enums.CategoryType;
 
 //This is an Custom Annotation
 @Retention(RetentionPolicy.RUNTIME)

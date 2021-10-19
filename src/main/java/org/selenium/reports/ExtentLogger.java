@@ -1,8 +1,8 @@
 package org.selenium.reports;
 
 import org.selenium.constants.FrameworkConstants;
-import org.selenium.pom.utils.ConfigLoader;
-import org.selenium.pom.utils.ScreenshotUtils;
+import org.selenium.utils.ConfigLoader;
+import org.selenium.utils.ScreenshotUtils;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.markuputils.Markup;

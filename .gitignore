@@ -1,0 +1,13 @@
+.settings
+.classpath
+.project
+README.md
+Drivers
+Screenshots
+target
+test-output
+allure-results
+ExtentReports
+ExtentReports.zip
+z_others
+testng_Local_Edge.xml

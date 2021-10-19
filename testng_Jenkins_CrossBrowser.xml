@@ -18,7 +18,7 @@
 		Browser">
 		<parameter name="browser" value="CHROME"></parameter>
 		<packages>
-			<package name="org.selenium.tests.Extent"></package>
+			<package name="org.selenium.tests"></package>
 		</packages>
 	</test>
 	<test parallel="methods"

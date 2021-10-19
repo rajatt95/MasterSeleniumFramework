@@ -8,11 +8,10 @@ import java.util.HashMap;
 
 import org.apache.commons.io.output.WriterOutputStream;
 import org.selenium.constants.FrameworkConstants;
-import org.selenium.pom.utils.ConfigLoader;
 import org.selenium.reports.ExtentLogger;
+import org.selenium.utils.ConfigLoader;
 
 import io.restassured.filter.log.RequestLoggingFilter;
-import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.Cookies;
 import io.restassured.http.Headers;
 import io.restassured.response.Response;
@@ -60,10 +59,10 @@ public class ApiRequest extends SpecBuilder {
 
 	public static Response get(String endPoint, Cookies cookies) {
 
-		StringWriter writer;
+		StringWriter writerRequest;
 		PrintStream captor;
-		writer = new StringWriter();
-		captor = new PrintStream(new WriterOutputStream(writer), true);
+		writerRequest = new StringWriter();
+		captor = new PrintStream(new WriterOutputStream(writerRequest), true);
 
 		Response response = 
 			given(getRequestSpec()).
@@ -76,7 +75,7 @@ public class ApiRequest extends SpecBuilder {
 				.spec(getResponseSpec()).
 				extract().response();
 
-		printDetailsInExtentReport(writer, response);
+		printDetailsInExtentReport(writerRequest, response);
 		return response;
 
 	}

@@ -1,12 +1,12 @@
 package org.selenium.factories;
 
-import org.selenium.pom.driver.DriverManagerChrome;
-import org.selenium.pom.driver.DriverManagerEdge;
-import org.selenium.pom.driver.DriverManagerFirefox;
-import org.selenium.pom.driver.DriverManagerOpera;
-import org.selenium.pom.driver.DriverManagerSafari;
-import org.selenium.pom.driver.DriverManager_OC;
-import org.selenium.pom.enums.DriverType;
+import org.selenium.driver.DriverManagerChrome;
+import org.selenium.driver.DriverManagerEdge;
+import org.selenium.driver.DriverManagerFirefox;
+import org.selenium.driver.DriverManagerOpera;
+import org.selenium.driver.DriverManagerSafari;
+import org.selenium.driver.DriverManager_OC;
+import org.selenium.enums.DriverType;
 
 public class DriverManagerFactory {
 

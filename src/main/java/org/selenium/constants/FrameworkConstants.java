@@ -2,8 +2,8 @@ package org.selenium.constants;
 
 import java.util.Date;
 
-import org.selenium.pom.utils.ConfigLoader;
-import org.selenium.pom.utils.OSInfoUtils;
+import org.selenium.utils.ConfigLoader;
+import org.selenium.utils.OSInfoUtils;
 
 public class FrameworkConstants {
 
@@ -28,7 +28,7 @@ public class FrameworkConstants {
 	/** Zip file of Extent Reports */
 	private static final String Zipped_ExtentReports_Folder_Name = "ExtentReports.zip";
 
-	private static final String Project_Name = "Automation Test Suite Report";
+	private static final String Project_Name = "Automation Test Suite Report - Master Selenium Framework";
 
 	public static String getProjectPath() {
 		return PROJECT_PATH;

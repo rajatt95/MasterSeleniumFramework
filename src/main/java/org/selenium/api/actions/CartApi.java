@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 import org.selenium.api.ApiRequest;
 import org.selenium.constants.FrameworkConstants;
-import org.selenium.pom.utils.VerificationManager;
+import org.selenium.utils.VerificationManager;
 
 import io.restassured.http.Cookies;
 import io.restassured.http.Header;

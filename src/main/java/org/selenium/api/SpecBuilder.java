@@ -1,6 +1,6 @@
 package org.selenium.api;
 
-import org.selenium.pom.utils.ConfigLoader;
+import org.selenium.utils.ConfigLoader;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;

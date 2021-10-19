@@ -1,7 +1,7 @@
 package org.selenium.listeners;
 
 import org.selenium.constants.FrameworkConstants;
-import org.selenium.pom.utils.ConfigLoader;
+import org.selenium.utils.ConfigLoader;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 

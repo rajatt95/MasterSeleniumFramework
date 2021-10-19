@@ -6,9 +6,9 @@ import java.io.IOException;
 import java.util.Objects;
 
 import org.selenium.constants.FrameworkConstants;
-import org.selenium.pom.enums.AuthorType;
-import org.selenium.pom.enums.CategoryType;
-import org.selenium.pom.utils.BrowserInfoUtils;
+import org.selenium.enums.AuthorType;
+import org.selenium.enums.CategoryType;
+import org.selenium.utils.BrowserInfoUtils;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;

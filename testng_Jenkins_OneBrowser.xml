@@ -7,14 +7,16 @@
 		<listener
 			class-name="org.selenium.listeners.AnnotationTransformer"></listener>
 		<listener class-name="org.selenium.listeners.ListenerClass"></listener>
-		<listener class-name="org.selenium.listeners.MethodInterceptor"></listener>
+		<listener
+			class-name="org.selenium.listeners.MethodInterceptor"></listener>
 	</listeners>
 
 	<!--thread-count="2" -->
 	<!--These values are coming from Maven command (Configured in pom.xml) -->
-	<test name="Regression Tests execution using Jenkins" parallel="methods">
+	<test name="Regression Tests execution using Jenkins"
+		parallel="methods">
 		<packages>
-			<package name="org.selenium.tests.Extent"></package>
+			<package name="org.selenium.tests"></package>
 		</packages>
 	</test>
 

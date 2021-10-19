@@ -3,11 +3,11 @@ package org.selenium.listeners;
 import java.util.Arrays;
 
 import org.selenium.annotations.FrameworkAnnotation;
-import org.selenium.pom.utils.BrowserOSInfoUtils;
-import org.selenium.pom.utils.EmailSendUtils;
-import org.selenium.pom.utils.ZipUtils;
 import org.selenium.reports.ExtentLogger;
 import org.selenium.reports.ExtentReport;
+import org.selenium.utils.BrowserOSInfoUtils;
+import org.selenium.utils.EmailSendUtils;
+import org.selenium.utils.ZipUtils;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.ITestContext;

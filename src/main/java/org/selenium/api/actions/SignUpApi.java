@@ -7,8 +7,8 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.selenium.api.ApiRequest;
 import org.selenium.constants.FrameworkConstants;
-import org.selenium.pom.objects.User;
-import org.selenium.pom.utils.VerificationManager;
+import org.selenium.objects.User;
+import org.selenium.utils.VerificationManager;
 
 import io.restassured.http.Cookies;
 import io.restassured.http.Header;

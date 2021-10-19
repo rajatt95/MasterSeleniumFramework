@@ -3,8 +3,8 @@ package org.selenium.dataproviders;
 
 import java.io.IOException;
 
-import org.selenium.pom.objects.Product;
-import org.selenium.pom.utils.JacksonUtils;
+import org.selenium.objects.Product;
+import org.selenium.utils.JacksonUtils;
 import org.testng.annotations.DataProvider;
 
 public class JSONDataProvider {

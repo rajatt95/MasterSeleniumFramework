@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.selenium.constants.FrameworkConstants;
-import org.selenium.pom.driver.DriverManager;
-import org.selenium.pom.enums.WaitStrategy;
+import org.selenium.driver.DriverManager;
+import org.selenium.enums.WaitStrategy;
 
 public final class ExplicitWaitFactory {
 
