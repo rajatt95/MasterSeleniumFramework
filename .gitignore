@@ -3,10 +3,9 @@
 .project
 Drivers
 Screenshots
+allure-results
 target
 test-output
-allure-results
-ExtentReports
-ExtentReports.zip
 z_others
 testng_Local_Edge.xml
+testng_Local_Only1TestCase.xml
