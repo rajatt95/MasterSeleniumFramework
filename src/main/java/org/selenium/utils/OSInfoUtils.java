@@ -9,9 +9,7 @@ public final class OSInfoUtils {
 	}
 
 	public static String getOSInfo() {
-
 		return System.getProperty("os.name").replace(" ", "_");
-
 	}
 
 }
