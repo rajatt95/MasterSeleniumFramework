@@ -16,9 +16,8 @@ Updations done:
 - TestType - Smoke, Sanity, Regression, BVT
 
 2. Screenshots are attached in the ExtentReport as Base64 format.
-![image](https://user-images.githubusercontent.com/26399692/135918483-ca9320af-83da-4b55-b3d7-24449cc1bd04.png)
-![image](https://user-images.githubusercontent.com/26399692/135918943-a430a4fc-dd05-4803-9765-dbb94bb4fd89.png)
-
+![image](https://user-images.githubusercontent.com/26399692/138960828-90e184a0-a354-43bc-b55d-c440b29b9d7a.png)
+![image](https://user-images.githubusercontent.com/26399692/138960863-e799db94-38e3-47ca-ae2d-0436fff3a08a.png)
 ------------------------------------------------------------
 **Allure Reports** 
 ![image](https://user-images.githubusercontent.com/26399692/135977881-10e654b4-6224-4aa9-8343-841af16aeeb3.png)
@@ -34,9 +33,10 @@ Updations done:
 2. Custom Enums, Exceptions, Annotations 
 3. Serialization and Deserialization using Jackson-Databind dependency
 4. Data Driven testing using JSON file
-5. Zip the ExtentReports directory into Project path (you can send this Zip file as well as an Attachment in Email)
-6. Automatically open the report after tests execution.
-7. Send EMail using Java mail API to User(s) with attachment(s).
+5. Icons addition in ExtentReport
+6. Zip the ExtentReports directory into Project path (you can send this Zip file as well as an Attachment in Email)
+7. Automatically open the report after tests execution.
+8. Send EMail using Java mail API to User(s) with attachment(s).
  - https://mvnrepository.com/artifact/javax.mail/mail/1.4.7
  - https://www.tutorialspoint.com/java/java_sending_email.htm
  - Gmail -> Manage your Google account: 
