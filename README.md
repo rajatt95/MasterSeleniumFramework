@@ -37,9 +37,19 @@ Updations done:
 2. Custom Enums, Exceptions, Annotations 
 3. Serialization and Deserialization using Jackson-Databind dependency
 4. Data Driven testing using JSON file
+-------------------------------
 5. Icons addition in ExtentReport
+a. Browser icon with every test case
+b. Test status 
+	       Test Description -> Last -> Pass (Happy), Fail (Sad)
+c. WIN + Browser
+d. Navigating to Right
+e. Details (Add Rajat linkedIn and Github URL)
+	      Make them Links and align it with Name
+------------------------------
 6. Zip the ExtentReports directory into Project path (you can send this Zip file as well as an Attachment in Email)
 7. Automatically open the report after tests execution.
+----------------------------------
 8. Send EMail using Java mail API to User(s) with attachment(s).
  - https://mvnrepository.com/artifact/javax.mail/mail/1.4.7
  - https://www.tutorialspoint.com/java/java_sending_email.htm
