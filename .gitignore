@@ -9,3 +9,6 @@ test-output
 z_others
 testng_Local_Edge.xml
 testng_Local_Only1TestCase.xml
+ExtentReports
+ExtentReports.zip
+README.md

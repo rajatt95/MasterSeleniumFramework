@@ -1,9 +1,8 @@
 package org.selenium.reports;
 
+import static org.selenium.constants.FrameworkConstants.ICON_LAPTOP;
 import static org.selenium.constants.FrameworkConstants.ICON_SOCIAL_GITHUB;
 import static org.selenium.constants.FrameworkConstants.ICON_SOCIAL_LINKEDIN;
-import static org.selenium.constants.FrameworkConstants.ICON_SOCIAL_LINKEDIN_URL;
-import static org.selenium.constants.FrameworkConstants.ICON_SOCIAL_GITHUB_URL;
 
 import java.awt.Desktop;
 import java.io.File;
@@ -57,7 +56,7 @@ public final class ExtentReport {
 			extent.setSystemInfo("Organization", "Nagarro");
 			extent.setSystemInfo("Employee",
 					"<b> Rajat Verma </b>" + " " + ICON_SOCIAL_LINKEDIN + " " + ICON_SOCIAL_GITHUB);
-			extent.setSystemInfo("Domain", "Engineering (IT - Software)");
+			extent.setSystemInfo("Domain", "Engineering (IT - Software)"+"  "+ICON_LAPTOP);
 			extent.setSystemInfo("Skill", "Test Automation Engineer");
 		}
 	}

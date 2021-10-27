@@ -2,6 +2,7 @@ package org.selenium.listeners;
 
 import static org.selenium.constants.FrameworkConstants.ICON_SMILEY_FAIL;
 import static org.selenium.constants.FrameworkConstants.ICON_SMILEY_PASS;
+import static org.selenium.constants.FrameworkConstants.ICON_BUG;
 
 import java.util.Arrays;
 
@@ -75,7 +76,7 @@ public class ListenerClass implements ITestListener, ISuiteListener {
 	@Override
 	public void onTestFailure(ITestResult result) {
 		count_failedTCs = count_failedTCs + 1;
-		ExtentLogger.fail("<b><i>" + result.getThrowable().toString() + "</i></b>");
+		ExtentLogger.fail(ICON_BUG + "  " + "<b><i>" + result.getThrowable().toString() + "</i></b>");
 		String exceptionMessage = Arrays.toString(result.getThrowable().getStackTrace());
 		String message = "<details><summary><b><font color=red> Exception occured, click to see details: "
 				+ ICON_SMILEY_FAIL + " </font></b>" + "</summary>" + exceptionMessage.replaceAll(",", "<br>")
@@ -93,7 +94,9 @@ public class ListenerClass implements ITestListener, ISuiteListener {
 	public void onTestSkipped(ITestResult result) {
 
 		count_skippedTCs = count_skippedTCs + 1;
-		ExtentLogger.skip("<b><i>" + result.getThrowable().toString() + "</i></b>");
+
+		ExtentLogger.skip(ICON_BUG + "  " + "<b><i>" + result.getThrowable().toString() + "</i></b>");
+		// ExtentLogger.skip("<b><i>" + result.getThrowable().toString() + "</i></b>");
 		String logText = "<b>" + result.getMethod().getMethodName() + " is skipped.</b>" + "  " + ICON_SMILEY_FAIL;
 		Markup markup_message = MarkupHelper.createLabel(logText, ExtentColor.YELLOW);
 		ExtentLogger.skip(markup_message, true);
