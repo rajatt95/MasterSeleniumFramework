@@ -27,20 +27,21 @@ public class FrameworkConstants {
 //	public static final String ICON_BROWSER_SAFARI = "<i class=\"fa fa-safari\" aria-hidden=\"true\"></i>";
 
 	public static final String ICON_Navigate_Right = "<i class='fa fa-arrow-circle-right' ></i>";
-
+	public static final String ICON_LAPTOP = "<i class='fa fa-laptop' style='font-size:18px'></i>";
+	public static final String ICON_BUG = "<i class='fa fa-bug' ></i>";
 	/* style="text-align:center;" */
 	public static final String ICON_SOCIAL_LINKEDIN_URL = "https://www.linkedin.com/in/rajat-v-3b0685128/";
 	public static final String ICON_SOCIAL_GITHUB_URL = "https://github.com/rajatt95";
-	public static final String ICON_SOCIAL_LINKEDIN = "<a href='"+ICON_SOCIAL_LINKEDIN_URL+"'><i class='fa fa-linkedin-square' style='font-size:24px'></i></a>";
-	public static final String ICON_SOCIAL_GITHUB = "<a href='" + ICON_SOCIAL_GITHUB_URL+"'><i class='fa fa-github-square' style='font-size:24px'></i></a>";
-
+	public static final String ICON_SOCIAL_LINKEDIN = "<a href='" + ICON_SOCIAL_LINKEDIN_URL
+			+ "'><i class='fa fa-linkedin-square' style='font-size:24px'></i></a>";
+	public static final String ICON_SOCIAL_GITHUB = "<a href='" + ICON_SOCIAL_GITHUB_URL
+			+ "'><i class='fa fa-github-square' style='font-size:24px'></i></a>";
 
 //	public static final String ICON_SOCIAL_LINKEDIN = "<i class='fa fa-linkedin-square' style='font-size:24px'></i>";
 //	public static final String ICON_SOCIAL_GITHUB = "<i class='fa fa-github-square' style='font-size:24px'></i>";
 //	public static final String ICON_SOCIAL_LINKEDIN_VALUE = "<a href='https://www.linkedin.com/in/rajat-v-3b0685128/'>LinkedIn</a>";
 //	public static final String ICON_SOCIAL_GITHUB_VALUE = "https://github.com/rajatt95";
 
-	
 	public static final String ICON_CAMERA = "<i class=\"fa fa-camera\" aria-hidden=\"true\"></i>";
 
 	public static final String ICON_BROWSER_EDGE = "edge";
