@@ -39,7 +39,7 @@ public final class ExtentLogger {
 	public static void info(Markup message) {
 		ExtentManager.getExtentTest().info(message);
 	}
-	
+
 	public static void info(String message) {
 		ExtentManager.getExtentTest().info(message);
 	}

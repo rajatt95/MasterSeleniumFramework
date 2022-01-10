@@ -14,6 +14,8 @@ import org.selenium.factories.ExplicitWaitFactory;
 import org.selenium.reports.ExtentLogger;
 import org.selenium.utils.ConfigLoader;
 
+import static org.selenium.constants.FrameworkConstants.ICON_Navigate_Right;
+
 public class BasePage {
 
 	/* Class level -> Not Thread safe */
@@ -40,10 +42,10 @@ public class BasePage {
 	}
 
 	public void load(String endPoint) {
-
 		// driver.get("https://askomdch.com/" + endPoint);
 		driver.get(ConfigLoader.getInstance().getBaseUrl() + endPoint);
-		ExtentLogger.info("Navigating to : <b>" + ConfigLoader.getInstance().getBaseUrl() + endPoint + "</b>");
+		ExtentLogger.info(ICON_Navigate_Right + "  Navigating to : <b>" + ConfigLoader.getInstance().getBaseUrl()
+				+ endPoint + "</b>");
 	}
 
 	public void waitForOverlaysToDisappear(By overlay) {
@@ -58,7 +60,6 @@ public class BasePage {
 	}
 
 	protected void click(By by, WaitStrategy waitStrategy, String elementName) {
-
 		// DriverManager.getDriver().findElement(by).click();
 		ExplicitWaitFactory.performExplicitWait(waitStrategy, by).click();
 		ExtentLogger.pass("<b>" + elementName + "</b> is clicked", true);

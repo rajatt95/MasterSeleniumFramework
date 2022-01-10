@@ -1,5 +1,9 @@
 package org.selenium.listeners;
 
+import static org.selenium.constants.FrameworkConstants.ICON_SMILEY_FAIL;
+import static org.selenium.constants.FrameworkConstants.ICON_SMILEY_PASS;
+import static org.selenium.constants.FrameworkConstants.ICON_BUG;
+
 import java.util.Arrays;
 
 import org.selenium.annotations.FrameworkAnnotation;
@@ -7,6 +11,7 @@ import org.selenium.reports.ExtentLogger;
 import org.selenium.reports.ExtentReport;
 import org.selenium.utils.BrowserOSInfoUtils;
 import org.selenium.utils.EmailSendUtils;
+import org.selenium.utils.IconUtils;
 import org.selenium.utils.ZipUtils;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
@@ -40,7 +45,7 @@ public class ListenerClass implements ITestListener, ISuiteListener {
 	@Override
 	public void onTestStart(ITestResult result) {
 
-		System.out.println("onTestStart() ");
+		// System.out.println("onTestStart() ");
 		count_totalTCs = count_totalTCs + 1;
 		ExtentReport.createTest(result.getMethod().getMethodName());
 		// ExtentReport.createTest(result.getMethod().getDescription());
@@ -52,39 +57,34 @@ public class ListenerClass implements ITestListener, ISuiteListener {
 				.getAnnotation(FrameworkAnnotation.class).category());
 
 		ExtentReport.addDevices();
-		ExtentLogger.info("<b>" + BrowserOSInfoUtils.getOS_Browser_BrowserVersionInfo() + "</b>");
+		// ExtentLogger.info("<b>" +
+		// BrowserOSInfoUtils.getOS_Browser_BrowserVersionInfo() + "</b>");
+		ExtentLogger.info("<b>" + IconUtils.getOSIcon() + "  &  " + IconUtils.getBrowserIcon() + " --------- "
+				+ BrowserOSInfoUtils.getOS_Browser_BrowserVersionInfo() + "</b>");
 
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		count_passedTCs = count_passedTCs + 1;
-		// TMB
-		// ExtentLogger.pass(result.getMethod().getMethodName() + " is passed");
-
-		// Rajat
-		String logText = "<b>" + result.getMethod().getMethodName() + " is passed.</b>";
+		String logText = "<b>" + result.getMethod().getMethodName() + " is passed.</b>" + "  " + ICON_SMILEY_PASS;
 		Markup markup_message = MarkupHelper.createLabel(logText, ExtentColor.GREEN);
-		ExtentLogger.pass(markup_message, true);
+		ExtentLogger.pass(markup_message);
 
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
 		count_failedTCs = count_failedTCs + 1;
-		// TMB
-		// ExtentLogger.fail(result.getMethod().getMethodName() + " is failed");
-		// ExtentLogger.fail(result.getMethod().getMethodName() + " is failed", true);
-		ExtentLogger.fail("<b><i>" + result.getThrowable().toString() + "</i></b>");
-		// ExtentLogger.fail(Arrays.toString(result.getThrowable().getStackTrace()));
-
-		// ExtentLogger.info("------------------------------------------------");
-
-		// Rajat
+		ExtentLogger.fail(ICON_BUG + "  " + "<b><i>" + result.getThrowable().toString() + "</i></b>");
 		String exceptionMessage = Arrays.toString(result.getThrowable().getStackTrace());
-		ExtentLogger.fail("<details><summary><b><font color=red> Exception occured, click to see details: </font></b>"
-				+ "</summary>" + exceptionMessage.replaceAll(",", "<br>") + "</details> \n");
-		String logText = "<b>" + result.getMethod().getMethodName() + " is failed.</b>";
+		String message = "<details><summary><b><font color=red> Exception occured, click to see details: "
+				+ ICON_SMILEY_FAIL + " </font></b>" + "</summary>" + exceptionMessage.replaceAll(",", "<br>")
+				+ "</details> \n";
+
+		ExtentLogger.fail(message);
+
+		String logText = "<b>" + result.getMethod().getMethodName() + " is failed.</b>" + "  " + ICON_SMILEY_FAIL;
 		Markup markup_message = MarkupHelper.createLabel(logText, ExtentColor.RED);
 		ExtentLogger.fail(markup_message, true);
 
@@ -94,14 +94,10 @@ public class ListenerClass implements ITestListener, ISuiteListener {
 	public void onTestSkipped(ITestResult result) {
 
 		count_skippedTCs = count_skippedTCs + 1;
-		// TMB
-		// ExtentLogger.skip(result.getMethod().getMethodName() + " is skipped");
-		// ExtentLogger.skip(result.getMethod().getMethodName() + " is skipped", true);
 
-		//ExtentLogger.skip(result.getThrowable().toString());
-		ExtentLogger.skip("<b><i>" + result.getThrowable().toString() + "</i></b>");
-		// Rajat
-		String logText = "<b>" + result.getMethod().getMethodName() + " is skipped.</b>";
+		ExtentLogger.skip(ICON_BUG + "  " + "<b><i>" + result.getThrowable().toString() + "</i></b>");
+		// ExtentLogger.skip("<b><i>" + result.getThrowable().toString() + "</i></b>");
+		String logText = "<b>" + result.getMethod().getMethodName() + " is skipped.</b>" + "  " + ICON_SMILEY_FAIL;
 		Markup markup_message = MarkupHelper.createLabel(logText, ExtentColor.YELLOW);
 		ExtentLogger.skip(markup_message, true);
 
@@ -118,8 +114,6 @@ public class ListenerClass implements ITestListener, ISuiteListener {
 	public void onStart(ITestContext result) {
 		/*
 		 * As of now, we are not using it.
-		 * 
-		 * We have only 1 <test> in suite. We do not have any implementation for it.
 		 */
 	}
 
@@ -127,8 +121,6 @@ public class ListenerClass implements ITestListener, ISuiteListener {
 	public void onFinish(ITestContext result) {
 		/*
 		 * As of now, we are not using it.
-		 * 
-		 * We have only 1 <test> in suite. We do not have any implementation for it.
 		 */
 	}
 

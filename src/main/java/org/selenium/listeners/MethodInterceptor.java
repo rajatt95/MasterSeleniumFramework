@@ -37,7 +37,8 @@ public class MethodInterceptor implements IMethodInterceptor {
 		}
 		if (testCategory == null) {
 			System.out.println(
-					"Either You are not running the test execution from Maven command line or you are not giving the property -D=testCategory");
+					"Either You are not running the test execution from Maven"
+					+ " command line or you are not giving the property -D=testCategory");
 			return methods;
 		} else {
 			return result;

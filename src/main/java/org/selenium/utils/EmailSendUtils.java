@@ -34,8 +34,8 @@ public class EmailSendUtils {
 			String attachmentFile_ExtentReport = FrameworkConstants.getExtentReportFilePath();
 
 			try {
-				EmailAttachmentsSender.sendEmailWithAttachments(SERVER, PORT,
-						FROM, PASSWORD, TO, SUBJECT, messageBody, attachmentFile_ExtentReport);
+				EmailAttachmentsSender.sendEmailWithAttachments(SERVER, PORT, FROM, PASSWORD, TO, SUBJECT, messageBody,
+						attachmentFile_ExtentReport);
 
 				System.out.println("****************************************");
 				System.out.println("Email sent successfully.");
