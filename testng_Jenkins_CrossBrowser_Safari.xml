@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Automation Test Suite" parallel="tests"
+	thread-count="12" data-provider-thread-count="2">
+	
+	<listeners>
+		<listener
+			class-name="org.selenium.listeners.AnnotationTransformer"></listener>
+		<listener class-name="org.selenium.listeners.ListenerClass"></listener>
+		<listener
+			class-name="org.selenium.listeners.MethodInterceptor"></listener>
+	</listeners>
+
+	<!-- thread-count="2" -->
+	<!--These values are coming from Maven command (Configured in pom.xml) -->
+	<test name="Regression Tests execution over Safari 
+		Browser"
+		parallel="methods">
+		<parameter name="browser" value="SAFARI"></parameter>
+		<packages>
+			<package name="org.selenium.tests"></package>
+		</packages>
+	</test>
+
+	<test name="Regression Tests execution over Chrome 
+		Browser"
+		parallel="methods">
+		<parameter name="browser" value="CHROME"></parameter>
+		<packages>
+			<package name="org.selenium.tests"></package>
+		</packages>
+	</test>
+
+	<test name="Regression Tests execution over Firefox 
+		Browser"
+		parallel="methods">
+		<parameter name="browser" value="FIREFOX"></parameter>
+		<packages>
+			<package name="org.selenium.tests"></package>
+		</packages>
+	</test>
+	<test name="Regression Tests execution over Edge 
+		Browser"
+		parallel="methods">
+		<parameter name="browser" value="EDGE"></parameter>
+		<packages>
+			<package name="org.selenium.tests"></package>
+		</packages>
+	</test>
+	<test name="Regression Tests execution over Opera 
+		Browser"
+		parallel="methods">
+		<parameter name="browser" value="OPERA"></parameter>
+		<packages>
+			<package name="org.selenium.tests"></package>
+		</packages>
+	</test>
+</suite> 
