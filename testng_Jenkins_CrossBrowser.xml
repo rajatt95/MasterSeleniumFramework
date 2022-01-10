@@ -20,7 +20,6 @@
 			<package name="org.selenium.tests"></package>
 		</packages>
 	</test>
-
 	<test name="Regression Tests execution over Firefox 
 		Browser"
 		parallel="methods">

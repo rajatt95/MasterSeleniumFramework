@@ -10,7 +10,8 @@
 		<maven.compiler.source>8</maven.compiler.source>
 		<maven.compiler.target>8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<!-- DEFAULT -->
+				<!-- DEFAULT - If you do not pass any value with mvn test, then, this value 
+			will be used -->
 		<suiteFile>testng_Local.xml</suiteFile>
 		<aspectj.version>1.9.4</aspectj.version>
 		<browserInstances>2</browserInstances>
