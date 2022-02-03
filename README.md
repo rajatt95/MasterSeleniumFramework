@@ -1,4 +1,4 @@
-# OC_MasterSeleniumFramework
+# MasterSeleniumFramework
 With further updates - This project is designed and developed with the help of -
 1. Udemy course (OmPrakash Chavan - Selenium Java Test Framework & Best Practices - Masterclass) - [Learnings from Course (UDEMY - OC - Selenium).pdf](https://github.com/rajatt95/MasterSeleniumFramework/files/7421670/Learnings.from.Course.UDEMY.-.OC.-.Selenium.pdf)
 2. YouTube playlist (Testing Mini Bytes - Selenium Automation Framework with Real-time dashboard)
