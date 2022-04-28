@@ -1,7 +1,6 @@
 package org.selenium.tests;
 
-import java.io.IOException;
-
+import io.qameta.allure.*;
 import org.selenium.annotations.FrameworkAnnotation;
 import org.selenium.base.BaseTest;
 import org.selenium.enums.AuthorType;
@@ -13,13 +12,7 @@ import org.selenium.pages.StorePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import io.qameta.allure.Description;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Issue;
-import io.qameta.allure.Link;
-import io.qameta.allure.Story;
-import io.qameta.allure.TmsLink;
+import java.io.IOException;
 
 @Epic("Epic - AddtoCart")
 @Feature("Feature - Product AddToCart")

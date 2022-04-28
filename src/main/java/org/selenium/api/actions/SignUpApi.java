@@ -1,7 +1,9 @@
 package org.selenium.api.actions;
 
-import java.util.HashMap;
-
+import io.restassured.http.Cookies;
+import io.restassured.http.Header;
+import io.restassured.http.Headers;
+import io.restassured.response.Response;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -10,10 +12,7 @@ import org.selenium.constants.FrameworkConstants;
 import org.selenium.objects.User;
 import org.selenium.utils.VerificationManager;
 
-import io.restassured.http.Cookies;
-import io.restassured.http.Header;
-import io.restassured.http.Headers;
-import io.restassured.response.Response;
+import java.util.HashMap;
 
 public class SignUpApi {
 

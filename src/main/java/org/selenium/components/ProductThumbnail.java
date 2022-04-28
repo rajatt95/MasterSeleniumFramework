@@ -1,12 +1,11 @@
 package org.selenium.components;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.selenium.base.BasePage;
+import org.selenium.pages.BasePage;
 import org.selenium.pages.CartPage;
-
-import io.qameta.allure.Step;
 
 public class ProductThumbnail extends BasePage {
 

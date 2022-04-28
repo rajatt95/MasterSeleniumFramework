@@ -1,8 +1,8 @@
 package org.selenium.utils;
 
-import java.util.Properties;
-
 import org.selenium.enums.EnvType;
+
+import java.util.Properties;
 
 /*Singleton Design pattern*/
 public class ConfigLoader {

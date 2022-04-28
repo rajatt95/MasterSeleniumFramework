@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Automation Test Suite" parallel="tests" thread-count="12" data-provider-thread-count="2">
+	<listeners>
+		<listener class-name="org.selenium.listeners.AnnotationTransformer"></listener>
+		<listener class-name="org.selenium.listeners.ListenerClass"></listener>
+		<listener class-name="org.selenium.listeners.MethodInterceptor"></listener>
+	</listeners>
+	<!-- <test thread-count="4" -->
+	<test thread-count="1" name="Regression Tests execution over Safari 
+		Browser" parallel="methods">
+		<parameter name="browser" value="SAFARI"></parameter>
+		<packages>
+			<package name="org.selenium.tests"></package>
+		</packages>
+	</test>
+</suite> 

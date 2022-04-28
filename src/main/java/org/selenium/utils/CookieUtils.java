@@ -1,11 +1,10 @@
 package org.selenium.utils;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import io.restassured.http.Cookies;
 import org.openqa.selenium.Cookie;
 
-import io.restassured.http.Cookies;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CookieUtils {
 

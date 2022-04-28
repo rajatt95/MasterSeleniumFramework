@@ -1,11 +1,6 @@
 package org.selenium.utils;
 
-import static org.selenium.constants.FrameworkConstants.ICON_BROWSER_EDGE;
-import static org.selenium.constants.FrameworkConstants.ICON_BROWSER_PREFIX;
-import static org.selenium.constants.FrameworkConstants.ICON_BROWSER_SUFFIX;
-import static org.selenium.constants.FrameworkConstants.ICON_OS_WINDOWS;
-import static org.selenium.constants.FrameworkConstants.ICON_OS_MAC;
-import static org.selenium.constants.FrameworkConstants.ICON_OS_LINUX;
+import static org.selenium.constants.FrameworkConstants.*;
 
 public final class IconUtils {
 
@@ -19,6 +14,7 @@ public final class IconUtils {
 		String browserInLowerCase = BrowserInfoUtils.getBrowserInfo().toLowerCase();
 		if (browserInLowerCase.contains(ICON_BROWSER_EDGE)) {
 			return ICON_BROWSER_PREFIX + ICON_BROWSER_EDGE + ICON_BROWSER_SUFFIX;
+			//return "<i class='fa-brands fa-edge'></i>";
 		} else {
 			return ICON_BROWSER_PREFIX + browserInLowerCase + ICON_BROWSER_SUFFIX;
 		}

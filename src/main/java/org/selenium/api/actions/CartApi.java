@@ -1,15 +1,14 @@
 package org.selenium.api.actions;
 
-import java.util.HashMap;
-
-import org.selenium.api.ApiRequest;
-import org.selenium.constants.FrameworkConstants;
-import org.selenium.utils.VerificationManager;
-
 import io.restassured.http.Cookies;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;
 import io.restassured.response.Response;
+import org.selenium.api.ApiRequest;
+import org.selenium.constants.FrameworkConstants;
+import org.selenium.utils.VerificationManager;
+
+import java.util.HashMap;
 
 public class CartApi {
 

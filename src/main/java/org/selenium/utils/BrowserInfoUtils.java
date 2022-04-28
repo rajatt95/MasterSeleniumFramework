@@ -13,14 +13,14 @@ public final class BrowserInfoUtils {
 	}
 
 	public static String getBrowserInfo() {
-		Capabilities cap = ((RemoteWebDriver) DriverManager.getDriver()).getCapabilities();
-		return cap.getBrowserName().toUpperCase();
+		Capabilities capabilities = ((RemoteWebDriver) DriverManager.getDriver()).getCapabilities();
+		return capabilities.getBrowserName().toUpperCase();
 
 	}
 
 	public static String getBrowserVersionInfo() {
-		Capabilities cap = ((RemoteWebDriver) DriverManager.getDriver()).getCapabilities();
-		return cap.getVersion();
+		Capabilities capabilities = ((RemoteWebDriver) DriverManager.getDriver()).getCapabilities();
+		return capabilities.getVersion();
 
 	}
 

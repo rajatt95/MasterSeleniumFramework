@@ -1,13 +1,11 @@
 package org.selenium.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.selenium.base.BasePage;
 import org.selenium.components.ProductThumbnail;
 import org.selenium.enums.WaitStrategy;
-
-import io.qameta.allure.Step;
 
 public class StorePage extends BasePage {
 

@@ -1,9 +1,8 @@
 package org.selenium.driver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverManagerFirefox implements DriverManager_OC {
 

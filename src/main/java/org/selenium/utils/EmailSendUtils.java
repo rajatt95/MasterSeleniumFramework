@@ -1,16 +1,12 @@
 package org.selenium.utils;
 
-import static org.selenium.java_Mail_API.EmailConfig.FROM;
-import static org.selenium.java_Mail_API.EmailConfig.PASSWORD;
-import static org.selenium.java_Mail_API.EmailConfig.PORT;
-import static org.selenium.java_Mail_API.EmailConfig.SERVER;
-import static org.selenium.java_Mail_API.EmailConfig.SUBJECT;
-import static org.selenium.java_Mail_API.EmailConfig.TO;
+import org.selenium.constants.FrameworkConstants;
+import org.selenium.java_Mail_API.EmailAttachmentsSender;
 
 import javax.mail.MessagingException;
 
-import org.selenium.constants.FrameworkConstants;
-import org.selenium.java_Mail_API.EmailAttachmentsSender;
+import static org.selenium.constants.FrameworkConstants.YES;
+import static org.selenium.java_Mail_API.EmailConfig.*;
 
 public class EmailSendUtils {
 
@@ -19,7 +15,11 @@ public class EmailSendUtils {
 	 */
 	public static void sendEmail(int count_totalTCs, int count_passedTCs, int count_failedTCs, int count_skippedTCs) {
 
-		if (ConfigLoader.getInstance().getSendEmailToUsers().equalsIgnoreCase(FrameworkConstants.getYes())) {
+		if (ConfigLoader.getInstance().getSendEmailToUsers().equalsIgnoreCase(YES)) {
+			System.out.println("****************************************");
+			System.out.println("Send Email - START");
+			System.out.println("****************************************");
+
 			System.out.println("File name: " + FrameworkConstants.getExtentReportFilePath());
 
 			String messageBody = getTestCasesCountInFormat(count_totalTCs, count_passedTCs, count_failedTCs,
@@ -39,6 +39,7 @@ public class EmailSendUtils {
 
 				System.out.println("****************************************");
 				System.out.println("Email sent successfully.");
+				System.out.println("Send Email - END");
 				System.out.println("****************************************");
 			} catch (MessagingException e) {
 				e.printStackTrace();

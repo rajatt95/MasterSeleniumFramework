@@ -1,12 +1,11 @@
 package org.selenium.api;
 
-import org.selenium.utils.ConfigLoader;
-
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
+import org.selenium.utils.ConfigLoader;
 
 public class SpecBuilder {
 	

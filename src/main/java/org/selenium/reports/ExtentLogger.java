@@ -1,11 +1,11 @@
 package org.selenium.reports;
 
-import org.selenium.constants.FrameworkConstants;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.markuputils.Markup;
 import org.selenium.utils.ConfigLoader;
 import org.selenium.utils.ScreenshotUtils;
 
-import com.aventstack.extentreports.MediaEntityBuilder;
-import com.aventstack.extentreports.markuputils.Markup;
+import static org.selenium.constants.FrameworkConstants.YES;
 
 public final class ExtentLogger {
 
@@ -48,8 +48,7 @@ public final class ExtentLogger {
 		// if
 		// (PropertyUtils.get(ConfigProperties.PASSED_STEPS_SCREENSHOT).equalsIgnoreCase("yes")
 		// && isScreeshotNeeded) {
-		if (ConfigLoader.getInstance().getPassedStepsScreenshot().equalsIgnoreCase(FrameworkConstants.getYes())
-				&& isScreeshotNeeded) {
+		if (ConfigLoader.getInstance().getPassedStepsScreenshot().equalsIgnoreCase(YES) && isScreeshotNeeded) {
 			ExtentManager.getExtentTest().pass(message,
 					MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotUtils.getBase64Image()).build());
 		} else {
@@ -61,8 +60,7 @@ public final class ExtentLogger {
 		// if
 		// (PropertyUtils.get(ConfigProperties.PASSED_STEPS_SCREENSHOT).equalsIgnoreCase("yes")
 		// && isScreeshotNeeded) {
-		if (ConfigLoader.getInstance().getPassedStepsScreenshot().equalsIgnoreCase(FrameworkConstants.getYes())
-				&& isScreeshotNeeded) {
+		if (ConfigLoader.getInstance().getPassedStepsScreenshot().equalsIgnoreCase(YES) && isScreeshotNeeded) {
 			/*
 			 * ExtentManager.getExtentTest().pass(message,
 			 * MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotUtils.
@@ -80,8 +78,7 @@ public final class ExtentLogger {
 		// if
 		// (PropertyUtils.get(ConfigProperties.FAILED_STEPS_SCREENSHOT).equalsIgnoreCase("yes")
 		// && isScreeshotNeeded) {
-		if (ConfigLoader.getInstance().getFailedStepsScreenshot().equalsIgnoreCase(FrameworkConstants.getYes())
-				&& isScreeshotNeeded) {
+		if (ConfigLoader.getInstance().getFailedStepsScreenshot().equalsIgnoreCase(YES) && isScreeshotNeeded) {
 			ExtentManager.getExtentTest().fail(message,
 					MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotUtils.getBase64Image()).build());
 		} else {
@@ -93,8 +90,7 @@ public final class ExtentLogger {
 		// if
 		// (PropertyUtils.get(ConfigProperties.FAILED_STEPS_SCREENSHOT).equalsIgnoreCase("yes")
 		// && isScreeshotNeeded) {
-		if (ConfigLoader.getInstance().getFailedStepsScreenshot().equalsIgnoreCase(FrameworkConstants.getYes())
-				&& isScreeshotNeeded) {
+		if (ConfigLoader.getInstance().getFailedStepsScreenshot().equalsIgnoreCase(YES) && isScreeshotNeeded) {
 			/*
 			 * ExtentManager.getExtentTest().fail(message,
 			 * MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotUtils.
@@ -112,8 +108,7 @@ public final class ExtentLogger {
 		// if
 		// (PropertyUtils.get(ConfigProperties.SKIPPED_STEPS_SCREENSHOT).equalsIgnoreCase("yes")
 		// && isScreeshotNeeded) {
-		if (ConfigLoader.getInstance().getSkippedStepsScreenshot().equalsIgnoreCase(FrameworkConstants.getYes())
-				&& isScreeshotNeeded) {
+		if (ConfigLoader.getInstance().getSkippedStepsScreenshot().equalsIgnoreCase(YES) && isScreeshotNeeded) {
 			ExtentManager.getExtentTest().skip(message,
 					MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotUtils.getBase64Image()).build());
 		} else {
@@ -125,8 +120,7 @@ public final class ExtentLogger {
 		// if
 		// (PropertyUtils.get(ConfigProperties.SKIPPED_STEPS_SCREENSHOT).equalsIgnoreCase("yes")
 		// && isScreeshotNeeded) {
-		if (ConfigLoader.getInstance().getSkippedStepsScreenshot().equalsIgnoreCase(FrameworkConstants.getYes())
-				&& isScreeshotNeeded) {
+		if (ConfigLoader.getInstance().getSkippedStepsScreenshot().equalsIgnoreCase(YES) && isScreeshotNeeded) {
 			/*
 			 * ExtentManager.getExtentTest().skip(message,
 			 * MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotUtils.

@@ -9,7 +9,7 @@ public class ExtentManager {
 
 	private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
 
-	static ExtentTest getExtentTest() {
+	public static ExtentTest getExtentTest() {
 		return extentTest.get();
 	}
 

@@ -1,11 +1,6 @@
 package org.selenium.base;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.List;
-
-import javax.imageio.ImageIO;
-
+import io.restassured.http.Cookies;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.OutputType;
@@ -14,22 +9,21 @@ import org.openqa.selenium.WebDriver;
 import org.selenium.driver.DriverManager;
 import org.selenium.driver.DriverManagerFactory;
 import org.selenium.enums.DriverType;
-import org.selenium.listeners.AnnotationTransformer;
-import org.selenium.listeners.ListenerClass;
-import org.selenium.listeners.MethodInterceptor;
 import org.selenium.reports.ExtentLogger;
 import org.selenium.utils.CookieUtils;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
-
-import io.restassured.http.Cookies;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
+
+import javax.imageio.ImageIO;
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
 
 public class BaseTest {
 

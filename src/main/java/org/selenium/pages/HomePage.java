@@ -2,7 +2,6 @@ package org.selenium.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.selenium.base.BasePage;
 import org.selenium.components.MyHeader;
 import org.selenium.components.ProductThumbnail;
 

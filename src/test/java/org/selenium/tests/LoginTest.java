@@ -1,7 +1,5 @@
 package org.selenium.tests;
 
-import java.io.IOException;
-
 import org.selenium.annotations.FrameworkAnnotation;
 import org.selenium.api.actions.CartApi;
 import org.selenium.api.actions.SignUpApi;
@@ -14,6 +12,8 @@ import org.selenium.pages.CheckoutPage;
 import org.selenium.utils.FakerUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.io.IOException;
 
 public class LoginTest extends BaseTest {
 

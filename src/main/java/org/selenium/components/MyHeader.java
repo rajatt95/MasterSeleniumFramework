@@ -2,9 +2,8 @@ package org.selenium.components;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.selenium.base.BasePage;
 import org.selenium.enums.WaitStrategy;
+import org.selenium.pages.BasePage;
 import org.selenium.pages.StorePage;
 
 public class MyHeader extends BasePage {

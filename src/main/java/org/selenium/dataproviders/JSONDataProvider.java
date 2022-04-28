@@ -1,11 +1,11 @@
 package org.selenium.dataproviders;
 
 
-import java.io.IOException;
-
 import org.selenium.objects.Product;
 import org.selenium.utils.JacksonUtils;
 import org.testng.annotations.DataProvider;
+
+import java.io.IOException;
 
 public class JSONDataProvider {
 

@@ -1,8 +1,8 @@
 package org.selenium.objects;
 
-import java.io.IOException;
-
 import org.selenium.utils.JacksonUtils;
+
+import java.io.IOException;
 
 public class Product {
 
