@@ -1,0 +1,8 @@
+
+8
+java:S2386"Make this member "protected".(ÂóÄüıÿÿÿÿ
+U
+java:S1118":Add a private constructor to hide the implicit public one.(ı«Áãøÿÿÿÿ
+e
+java:S1192"JUse already-defined constant 'FROM' instead of duplicating its value here.(ÂóÄüıÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(®Ø‘À

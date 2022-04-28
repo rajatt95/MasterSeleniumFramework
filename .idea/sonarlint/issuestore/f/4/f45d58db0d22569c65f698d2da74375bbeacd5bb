@@ -1,0 +1,13 @@
+
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ä“…
+N	java:S106"9Replace this use of System.out or System.err by a logger.(±êñ´
+P	java:S125#"<This block of commented-out lines of code should be removed.(Í††y
+N	java:S106%"9Replace this use of System.out or System.err by a logger.(š°“ä
+t
+java:S3012+"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(¶•èûÿÿÿÿ
+Q	java:S125-"<This block of commented-out lines of code should be removed.(«Õå
+N	java:S1064"9Replace this use of System.out or System.err by a logger.(ÆÀûı
+m
+java:S2293!"YReplace the type specification in this constructor call with the diamond operator ("<>").(û)
+o
+java:S2293)"YReplace the type specification in this constructor call with the diamond operator ("<>").( ¸½

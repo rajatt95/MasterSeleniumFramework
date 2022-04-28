@@ -1,0 +1,27 @@
+
+7
+java:S1116!"Remove this empty statement.(ôŸìúÿÿÿÿ
+Q	java:S125?"<This block of commented-out lines of code should be removed.(¡ÇÌÊ
+V	java:S125D"<This block of commented-out lines of code should be removed.(ë…Óşÿÿÿÿ
+Q	java:S125M"<This block of commented-out lines of code should be removed.(ßÙ½»
+Q	java:S125P"<This block of commented-out lines of code should be removed.(ùë‡‚
+Q	java:S125T"<This block of commented-out lines of code should be removed.(€‚Ôå
+N	java:S106Z"9Replace this use of System.out or System.err by a logger.(ŒÙÑ–
+V	java:S125`"<This block of commented-out lines of code should be removed.(—Ğä”üÿÿÿÿ
+Q	java:S125e"<This block of commented-out lines of code should be removed.(ì«²³
+N	java:S106k"9Replace this use of System.out or System.err by a logger.(Âçğ
+Q	java:S125q"<This block of commented-out lines of code should be removed.(ĞËÊØ
+V	java:S125"<This block of commented-out lines of code should be removed.(¯´´‚úÿÿÿÿ
+R	java:S125Œ"<This block of commented-out lines of code should be removed.(Àé¹
+W	java:S125™"<This block of commented-out lines of code should be removed.(¤¨ĞÄúÿÿÿÿ
+W	java:S125¦"<This block of commented-out lines of code should be removed.(’ƒöÁùÿÿÿÿ
+R	java:S125´"<This block of commented-out lines of code should be removed.(şä¾
+R	java:S125»"<This block of commented-out lines of code should be removed.(ÈåÉ‹
+W	java:S125Á"<This block of commented-out lines of code should be removed.(ıîÎ®ûÿÿÿÿ
+W	java:S125È"<This block of commented-out lines of code should be removed.(¡ÀÁ¾şÿÿÿÿ
+W	java:S125Ï"<This block of commented-out lines of code should be removed.(ÍÅŸŠùÿÿÿÿ
+R	java:S125Ö"<This block of commented-out lines of code should be removed.(›÷ÒÂ
+I
+java:S10681"3Remove this unused "countryDropDown" private field.(‡³şÅ
+L
+java:S10682"1Remove this unused "stateDropDown" private field.(ƒÆ¯üÿÿÿÿÿ

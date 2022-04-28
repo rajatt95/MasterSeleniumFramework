@@ -1,0 +1,12 @@
+
+t	java:S115&"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(äÓ–ıÿÿÿÿ
+v	java:S115M"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Î“ª¶8ŠÏøİı/
+t	java:S115O"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(²ÆĞôúÿÿÿÿ
+‘
+java:S1845F"vRename field "WAIT" to prevent any misunderstanding/clash with method "wait" defined in superclass "java.lang.Object".(÷È×Şÿÿÿÿÿ
+U
+java:S1118":Add a private constructor to hide the implicit public one.(àÉàÆÿÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(³¼×
+V	java:S125 "<This block of commented-out lines of code should be removed.(’äéòûÿÿÿÿ
+Q	java:S1251"<This block of commented-out lines of code should be removed.(¿ù«æ
+c	java:S100Y"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìºò 
