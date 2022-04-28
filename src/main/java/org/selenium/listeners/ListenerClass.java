@@ -1,11 +1,20 @@
+/**
+ * @author Rajat Verma
+ * https://www.linkedin.com/in/rajat-v-3b0685128/
+ * https://github.com/rajatt95
+ * https://rajatt95.github.io/
+ *
+ * Course: Selenium Java Test Framework & Best Practices - Masterclass (https://www.udemy.com/course/selenium-java-test-framework/)
+ * Tutor: Omprakash Chavan (https://www.udemy.com/user/omprakash-chavan/)
+ */
+
+/***************************************************/
+
 package org.selenium.listeners;
 
-import static org.selenium.constants.FrameworkConstants.ICON_SMILEY_FAIL;
-import static org.selenium.constants.FrameworkConstants.ICON_SMILEY_PASS;
-import static org.selenium.constants.FrameworkConstants.ICON_BUG;
-
-import java.util.Arrays;
-
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.Markup;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 import org.selenium.annotations.FrameworkAnnotation;
 import org.selenium.reports.ExtentLogger;
 import org.selenium.reports.ExtentReport;
@@ -13,15 +22,11 @@ import org.selenium.utils.BrowserOSInfoUtils;
 import org.selenium.utils.EmailSendUtils;
 import org.selenium.utils.IconUtils;
 import org.selenium.utils.ZipUtils;
-import org.testng.ISuite;
-import org.testng.ISuiteListener;
-import org.testng.ITestContext;
-import org.testng.ITestListener;
-import org.testng.ITestResult;
+import org.testng.*;
 
-import com.aventstack.extentreports.markuputils.ExtentColor;
-import com.aventstack.extentreports.markuputils.Markup;
-import com.aventstack.extentreports.markuputils.MarkupHelper;
+import java.util.Arrays;
+
+import static org.selenium.constants.FrameworkConstants.*;
 
 public class ListenerClass implements ITestListener, ISuiteListener {
 
@@ -70,7 +75,6 @@ public class ListenerClass implements ITestListener, ISuiteListener {
 		String logText = "<b>" + result.getMethod().getMethodName() + " is passed.</b>" + "  " + ICON_SMILEY_PASS;
 		Markup markup_message = MarkupHelper.createLabel(logText, ExtentColor.GREEN);
 		ExtentLogger.pass(markup_message);
-
 	}
 
 	@Override

@@ -1,14 +1,26 @@
-package org.selenium.listeners;
+/**
+ * @author Rajat Verma
+ * https://www.linkedin.com/in/rajat-v-3b0685128/
+ * https://github.com/rajatt95
+ * https://rajatt95.github.io/
+ *
+ * Course: Selenium Java Test Framework & Best Practices - Masterclass (https://www.udemy.com/course/selenium-java-test-framework/)
+ * Tutor: Omprakash Chavan (https://www.udemy.com/user/omprakash-chavan/)
+ */
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+/***************************************************/
+
+package org.selenium.listeners;
 
 import org.testng.IMethodInstance;
 import org.testng.IMethodInterceptor;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class MethodInterceptor implements IMethodInterceptor {
 
@@ -24,7 +36,8 @@ public class MethodInterceptor implements IMethodInterceptor {
 		String testCategory = System.getProperty("testCategory");
 		System.out.println("testCategory: " + testCategory);
 		for (IMethodInstance method : methods) {
-			Test testMethod = method.getMethod().getConstructorOrMethod().getMethod().getAnnotation(Test.class);
+			Test testMethod = method.getMethod().getConstructorOrMethod()
+					.getMethod().getAnnotation(Test.class);
 			Set<String> groups = new HashSet<String>();
 			for (String group : testMethod.groups()) {
 				groups.add(group);

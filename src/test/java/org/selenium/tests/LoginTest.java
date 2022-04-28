@@ -1,6 +1,16 @@
-package org.selenium.tests;
+/**
+ * @author Rajat Verma
+ * https://www.linkedin.com/in/rajat-v-3b0685128/
+ * https://github.com/rajatt95
+ * https://rajatt95.github.io/
+ *
+ * Course: Selenium Java Test Framework & Best Practices - Masterclass (https://www.udemy.com/course/selenium-java-test-framework/)
+ * Tutor: Omprakash Chavan (https://www.udemy.com/user/omprakash-chavan/)
+ */
 
-import java.io.IOException;
+/***************************************************/
+
+package org.selenium.tests;
 
 import org.selenium.annotations.FrameworkAnnotation;
 import org.selenium.api.actions.CartApi;
@@ -14,6 +24,8 @@ import org.selenium.pages.CheckoutPage;
 import org.selenium.utils.FakerUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.io.IOException;
 
 public class LoginTest extends BaseTest {
 

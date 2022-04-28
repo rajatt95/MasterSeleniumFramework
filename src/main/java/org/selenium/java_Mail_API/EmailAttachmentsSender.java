@@ -1,21 +1,22 @@
+/**
+ * @author Rajat Verma
+ * https://www.linkedin.com/in/rajat-v-3b0685128/
+ * https://github.com/rajatt95
+ * https://rajatt95.github.io/
+ *
+ * Course: Selenium Java Test Framework & Best Practices - Masterclass (https://www.udemy.com/course/selenium-java-test-framework/)
+ * Tutor: Omprakash Chavan (https://www.udemy.com/user/omprakash-chavan/)
+ */
+
+/***************************************************/
+
 package org.selenium.java_Mail_API;
 
+import javax.mail.*;
+import javax.mail.internet.*;
 import java.io.IOException;
 import java.util.Date;
 import java.util.Properties;
-
-import javax.mail.Authenticator;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Multipart;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeBodyPart;
-import javax.mail.internet.MimeMessage;
-import javax.mail.internet.MimeMultipart;
 
 /**
  * https://www.codejava.net/java-ee/javamail/send-e-mail-with-attachment-in-java

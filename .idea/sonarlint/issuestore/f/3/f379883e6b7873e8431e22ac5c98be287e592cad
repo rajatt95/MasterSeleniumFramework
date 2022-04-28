@@ -1,0 +1,10 @@
+
+P
+java:S1874%":Remove this use of "WriterOutputStream"; it is deprecated.(Ö‘”
+E
+java:S11720"/Remove this unused method parameter "response".(”·ĞÒ
+Q	java:S1256"<This block of commented-out lines of code should be removed.(Œ‘â
+P
+java:S1874E":Remove this use of "WriterOutputStream"; it is deprecated.(Ö‘”
+‚
+java:S1319 "gThe type of "formParams" should be an interface such as "Map" rather than the implementation "HashMap".(×°ú¿üÿÿÿÿ

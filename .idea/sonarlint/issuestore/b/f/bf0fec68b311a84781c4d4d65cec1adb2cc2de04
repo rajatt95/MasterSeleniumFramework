@@ -1,0 +1,26 @@
+
+p
+java:S3008!"ZRename this field "count_passedTCs" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê”ùû
+q
+java:S3008""[Rename this field "count_skippedTCs" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø™Íõ
+p
+java:S3008#"ZRename this field "count_failedTCs" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ãƒªˆ
+t
+java:S3008$"YRename this field "count_totalTCs" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯è•Ğúÿÿÿÿ
+Q
+java:S26966"6Make the enclosing method "static" or remove this set.(™’·şÿÿÿÿ
+V	java:S1255"<This block of commented-out lines of code should be removed.(Ê™æµûÿÿÿÿ
+V	java:S1258"<This block of commented-out lines of code should be removed.(ÆŞƒ‰ÿÿÿÿÿ
+V	java:S125B"<This block of commented-out lines of code should be removed.(½åëâüÿÿÿÿ
+Q
+java:S2696J"6Make the enclosing method "static" or remove this set.(ßßêØøÿÿÿÿ
+L
+java:S2696R"6Make the enclosing method "static" or remove this set.(ÍÔ‰‡
+c
+java:S5361V"HReplace this call to "replaceAll()" by a call to the "replace()" method.(ãî¯´ûÿÿÿÿ
+Q
+java:S2696d"6Make the enclosing method "static" or remove this set.(ÓØûşÿÿÿÿ
+P	java:S125g"<This block of commented-out lines of code should be removed.(Ù†Â	
+k	java:S117L"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜·şšøÿÿÿÿ
+k	java:S117\"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§¾³úÿÿÿÿ
+k	java:S117i"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«Ñ²Ëıÿÿÿÿ

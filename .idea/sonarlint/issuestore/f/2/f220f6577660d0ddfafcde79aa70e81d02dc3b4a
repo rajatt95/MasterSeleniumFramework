@@ -1,0 +1,48 @@
+
+U
+java:S1118":Add a private constructor to hide the implicit public one.(œŸî”ıÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(İ§¬üÿÿÿÿ
+S	java:S106 "9Replace this use of System.out or System.err by a logger.(¿ÏØúÿÿÿÿ
+S	java:S106!"9Replace this use of System.out or System.err by a logger.(İ§¬üÿÿÿÿ
+N	java:S106#"9Replace this use of System.out or System.err by a logger.(µï×š
+N	java:S106'"9Replace this use of System.out or System.err by a logger.(Œ»²Õ
+V	java:S125+"<This block of commented-out lines of code should be removed.(éƒë¨şÿÿÿÿ
+S	java:S1064"9Replace this use of System.out or System.err by a logger.(İ§¬üÿÿÿÿ
+S	java:S1065"9Replace this use of System.out or System.err by a logger.(õÀ¸Œşÿÿÿÿ
+S	java:S1066"9Replace this use of System.out or System.err by a logger.(¨ÈÇÁÿÿÿÿÿ
+S	java:S1067"9Replace this use of System.out or System.err by a logger.(İ§¬üÿÿÿÿ
+N	java:S106B"9Replace this use of System.out or System.err by a logger.(ËÆİ˜
+S	java:S106C"9Replace this use of System.out or System.err by a logger.(¼ºÈ©ıÿÿÿÿ
+S	java:S106D"9Replace this use of System.out or System.err by a logger.(İ˜ÉÏüÿÿÿÿ
+S	java:S106E"9Replace this use of System.out or System.err by a logger.(÷è—Øøÿÿÿÿ
+`
+java:S1192M"KDefine a constant instead of duplicating this literal "       \r
+" 5 times.(Æç
+n
+java:S1192N"XDefine a constant instead of duplicating this literal "                <td>\r
+" 3 times.(§ğ¦
+j
+java:S1192X"TDefine a constant instead of duplicating this literal "                \r
+" 3 times.(ìŠØÄ
+µ
+java:S1192K"™Define a constant instead of duplicating this literal "                     <tr><td style=\"font-size: 36px\" class=\"value\" align=\"center\">" 4 times.(²¤¼îşÿÿÿÿ
+„
+java:S1192"iDefine a constant instead of duplicating this literal "****************************************" 4 times.(İ§¬üÿÿÿÿ
+o
+java:S1192N"YDefine a constant instead of duplicating this literal "                </td>\r
+" 4 times.(§ğ¦
+i
+java:S1192L"NDefine a constant instead of duplicating this literal "</td></tr>\r
+" 4 times.(³ áÉüÿÿÿÿ
+r
+java:S1192N"\Define a constant instead of duplicating this literal "                </table>\r
+" 4 times.(§ğ¦
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª‹†úÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª‹†úÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª‹†úÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª‹†úÿÿÿÿ
+k	java:S117."QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì¿µ€øÿÿÿÿ
+f	java:S117@"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô«É
+f	java:S117@"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô«É
+f	java:S117@"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô«É
+k	java:S117A"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­Ä€üÿÿÿÿ

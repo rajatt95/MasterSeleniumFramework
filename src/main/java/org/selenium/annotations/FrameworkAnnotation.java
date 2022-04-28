@@ -1,12 +1,25 @@
+/**
+ * @author Rajat Verma
+ * https://www.linkedin.com/in/rajat-v-3b0685128/
+ * https://github.com/rajatt95
+ * https://rajatt95.github.io/
+ *
+ * Course: Selenium Java Test Framework & Best Practices - Masterclass (https://www.udemy.com/course/selenium-java-test-framework/)
+ * Tutor: Omprakash Chavan (https://www.udemy.com/user/omprakash-chavan/)
+ * Tutor: Amuthan Sakthivel (https://www.testingminibytes.com/)
+ */
+
+/***************************************************/
+
 package org.selenium.annotations;
+
+import org.selenium.enums.AuthorType;
+import org.selenium.enums.CategoryType;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-
-import org.selenium.enums.AuthorType;
-import org.selenium.enums.CategoryType;
 
 //This is an Custom Annotation
 @Retention(RetentionPolicy.RUNTIME)

@@ -1,23 +1,33 @@
+/**
+ * @author Rajat Verma
+ * https://www.linkedin.com/in/rajat-v-3b0685128/
+ * https://github.com/rajatt95
+ * https://rajatt95.github.io/
+ *
+ * Course: Selenium Java Test Framework & Best Practices - Masterclass (https://www.udemy.com/course/selenium-java-test-framework/)
+ * Tutor: Omprakash Chavan (https://www.udemy.com/user/omprakash-chavan/)
+ * Tutor: Amuthan Sakthivel (https://www.testingminibytes.com/)
+ */
+
+/***************************************************/
+
 package org.selenium.reports;
 
-import static org.selenium.constants.FrameworkConstants.ICON_LAPTOP;
-import static org.selenium.constants.FrameworkConstants.ICON_SOCIAL_GITHUB;
-import static org.selenium.constants.FrameworkConstants.ICON_SOCIAL_LINKEDIN;
-
-import java.awt.Desktop;
-import java.io.File;
-import java.io.IOException;
-import java.util.Objects;
-
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.selenium.constants.FrameworkConstants;
 import org.selenium.enums.AuthorType;
 import org.selenium.enums.CategoryType;
 import org.selenium.utils.BrowserInfoUtils;
 import org.selenium.utils.IconUtils;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import com.aventstack.extentreports.reporter.configuration.Theme;
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+import java.util.Objects;
+
+import static org.selenium.constants.FrameworkConstants.*;
 
 public final class ExtentReport {
 

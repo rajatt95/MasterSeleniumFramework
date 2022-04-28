@@ -1,0 +1,10 @@
+
+U
+java:S1118":Add a private constructor to hide the implicit public one.(‰×ç†ûÿÿÿÿ
+ 
+java:S1130$"‰Remove the declaration of thrown exception 'javax.mail.internet.AddressException' which is a subclass of 'javax.mail.MessagingException'.(”¨âò
+U
+java:S11611":Add the "@Override" annotation above this method signature(ÇÐüÇùÿÿÿÿ
+Q	java:S125B"<This block of commented-out lines of code should be removed.(Ð¥«Ž
+Q	java:S107""<Method has 8 parameters, which is greater than 7 authorized.(ò×˜ß
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(®Ø‘À

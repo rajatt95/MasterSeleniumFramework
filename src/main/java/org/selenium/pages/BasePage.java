@@ -1,7 +1,19 @@
-package org.selenium.base;
+/**
+ * @author Rajat Verma
+ * https://www.linkedin.com/in/rajat-v-3b0685128/
+ * https://github.com/rajatt95
+ * https://rajatt95.github.io/
+ *
+ * Course: Selenium Java Test Framework & Best Practices - Masterclass (https://www.udemy.com/course/selenium-java-test-framework/)
+ * Tutor: Omprakash Chavan (https://www.udemy.com/user/omprakash-chavan/)
+ */
 
-import java.util.List;
+/***************************************************/
 
+package org.selenium.pages;
+
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.google.common.util.concurrent.Uninterruptibles;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,9 +24,15 @@ import org.selenium.driver.DriverManager;
 import org.selenium.enums.WaitStrategy;
 import org.selenium.factories.ExplicitWaitFactory;
 import org.selenium.reports.ExtentLogger;
+import org.selenium.reports.ExtentManager;
 import org.selenium.utils.ConfigLoader;
+import org.selenium.utils.ScreenshotUtils;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import static org.selenium.constants.FrameworkConstants.ICON_Navigate_Right;
+import static org.selenium.constants.FrameworkConstants.WAIT;
 
 public class BasePage {
 
@@ -98,5 +116,18 @@ public class BasePage {
 	 * public WebElement getElement(By element) { return
 	 * wait.until(ExpectedConditions.visibilityOfElementLocated(element)); }
 	 */
+
+	protected void captureScreenshot() {
+		ExtentManager.getExtentTest().info("Capturing Screenshot",
+				MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotUtils.getBase64Image()).build());
+	}
+
+	protected void waitForSomeTime() {
+		Uninterruptibles.sleepUninterruptibly(WAIT, TimeUnit.SECONDS);
+	}
+
+	protected void waitForGivenTime(long time) {
+		Uninterruptibles.sleepUninterruptibly(time, TimeUnit.SECONDS);
+	}
 
 }

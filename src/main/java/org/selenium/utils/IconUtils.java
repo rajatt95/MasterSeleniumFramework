@@ -1,11 +1,18 @@
+/**
+ * @author Rajat Verma
+ * https://www.linkedin.com/in/rajat-v-3b0685128/
+ * https://github.com/rajatt95
+ * https://rajatt95.github.io/
+ *
+ * Course: Selenium Java Test Framework & Best Practices - Masterclass (https://www.udemy.com/course/selenium-java-test-framework/)
+ * Tutor: Omprakash Chavan (https://www.udemy.com/user/omprakash-chavan/)
+ */
+
+/***************************************************/
+
 package org.selenium.utils;
 
-import static org.selenium.constants.FrameworkConstants.ICON_BROWSER_EDGE;
-import static org.selenium.constants.FrameworkConstants.ICON_BROWSER_PREFIX;
-import static org.selenium.constants.FrameworkConstants.ICON_BROWSER_SUFFIX;
-import static org.selenium.constants.FrameworkConstants.ICON_OS_WINDOWS;
-import static org.selenium.constants.FrameworkConstants.ICON_OS_MAC;
-import static org.selenium.constants.FrameworkConstants.ICON_OS_LINUX;
+import static org.selenium.constants.FrameworkConstants.*;
 
 public final class IconUtils {
 
@@ -19,6 +26,7 @@ public final class IconUtils {
 		String browserInLowerCase = BrowserInfoUtils.getBrowserInfo().toLowerCase();
 		if (browserInLowerCase.contains(ICON_BROWSER_EDGE)) {
 			return ICON_BROWSER_PREFIX + ICON_BROWSER_EDGE + ICON_BROWSER_SUFFIX;
+			//return "<i class='fa-brands fa-edge'></i>";
 		} else {
 			return ICON_BROWSER_PREFIX + browserInLowerCase + ICON_BROWSER_SUFFIX;
 		}

@@ -1,7 +1,21 @@
+/**
+ * @author Rajat Verma
+ * https://www.linkedin.com/in/rajat-v-3b0685128/
+ * https://github.com/rajatt95
+ * https://rajatt95.github.io/
+ *
+ * Course: Selenium Java Test Framework & Best Practices - Masterclass (https://www.udemy.com/course/selenium-java-test-framework/)
+ * Tutor: Omprakash Chavan (https://www.udemy.com/user/omprakash-chavan/)
+ */
+
+/***************************************************/
+
 package org.selenium.api.actions;
 
-import java.util.HashMap;
-
+import io.restassured.http.Cookies;
+import io.restassured.http.Header;
+import io.restassured.http.Headers;
+import io.restassured.response.Response;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -10,10 +24,7 @@ import org.selenium.constants.FrameworkConstants;
 import org.selenium.objects.User;
 import org.selenium.utils.VerificationManager;
 
-import io.restassured.http.Cookies;
-import io.restassured.http.Header;
-import io.restassured.http.Headers;
-import io.restassured.response.Response;
+import java.util.HashMap;
 
 public class SignUpApi {
 
