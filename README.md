@@ -1,4 +1,6 @@
 # MasterSeleniumFramework
+https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3/
+https://adamtheautomator.com/git-bash/#:~:text=Launch%20Git%20Bash%20console%20by,and%20click%20on%20Git%20Bash.&text=from%20Start%20Button-,2.,how%20Git%20looks%20and%20operates.
 With further updates - This project is designed and developed with the help of -
 1. Udemy course (OmPrakash Chavan - Selenium Java Test Framework & Best Practices - Masterclass) - [Learnings from Course (UDEMY - OC - Selenium).pdf](https://github.com/rajatt95/MasterSeleniumFramework/files/7421670/Learnings.from.Course.UDEMY.-.OC.-.Selenium.pdf)
 2. YouTube playlist (Testing Mini Bytes - Selenium Automation Framework with Real-time dashboard)
