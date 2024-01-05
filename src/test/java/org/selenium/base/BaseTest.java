@@ -21,13 +21,13 @@ import org.openqa.selenium.WebDriver;
 import org.selenium.driver.DriverManager;
 import org.selenium.driver.DriverManagerFactory;
 import org.selenium.enums.DriverType;
+import org.selenium.listeners.AnnotationTransformer;
+import org.selenium.listeners.ListenerClass;
+import org.selenium.listeners.MethodInterceptor;
 import org.selenium.reports.ExtentLogger;
 import org.selenium.utils.CookieUtils;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
@@ -37,6 +37,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+@Listeners({
+		AnnotationTransformer.class,
+		ListenerClass.class,
+		MethodInterceptor.class
+})
 public class BaseTest {
 
 	/* Class level -> Not Thread safe */
@@ -173,3 +178,5 @@ public class BaseTest {
 	}
 
 }
+
+//class-name="org.selenium.listeners.MethodInterceptor"></listener>
